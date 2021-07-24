@@ -11,6 +11,7 @@
     --color-nav: rgb(34, 34, 34);
     --color-title: rgb(36, 36, 36);
     --font-size-title: 14px;
+    --font-size-label: 16px;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -36,7 +37,7 @@ ul{
 .align-item-center{
     align-items: center;
 }
-input:focus{
+input:focus, select:focus{
     outline: none;
 }
 /*  */
@@ -141,6 +142,8 @@ input:focus{
 }
 /* header-bottom */
 .container{
+    position: relative;
+    display: block;
     max-width: 1200px;
     margin: auto;
     padding: 1rem 0;
@@ -171,11 +174,11 @@ input:focus{
 .product .row{
     display: flex;
     width: 100%;
-    height: 200px;
 }
 .product .row .col-md-3{
     flex: 0 0 25%;
     width: 100%;
+    padding-right: 20px;
 }
 .product .row .col-md-9{
     flex: 0 0 75%;
@@ -195,6 +198,7 @@ input:focus{
 .sidebar ul{
     list-style: none;
     width: 100%;
+    height: auto;
     left: 0;
     top: 0;
     padding-right: 10px;
@@ -242,9 +246,58 @@ input:focus{
     height: auto;
     display: inline-block;
 }
-.product .row .col-md-9 .row.toolbar, .product .row .col-md-9 .row.product-list{
+.product .row .col-md-9 .toolbar, .product .row .col-md-9 .product-list{
     position: relative;
 } 
+.product .row .col-md-9 .toolbar .row{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product .row .col-md-9 .toolbar .row .filters label{
+    padding: 10px 0;
+    font-size: var(--font-size-label);
+}
+.product .row .col-md-9 .toolbar .row .filters select{
+    padding: 5px;
+}
+.product .row .col-md-9 .toolbar .row .modes{
+    display: flex;
+    font-size: 24px;
+    background-color: gray;
+    border-radius: 2px;
+}
+.product .row .col-md-9 .toolbar .row .modes span{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    cursor: pointer;
+    color: white;
+}
+.product .row .col-md-9 .toolbar .row .modes span.active{
+    background-color: rgb(100, 149, 237);
+    border-radius: 2px;
+}
+.product .row .col-md-9 .toolbar .row .modes span:hover{
+    background-color: rgb(86, 134, 224);
+    border-radius: 2px;
+}
+.product .row .col-md-9 .product-list{
 
+}
 /* col-md-9 */
 /* Product */
+/* footer */
+footer{
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: cornflowerblue;
+}
+/* footer */

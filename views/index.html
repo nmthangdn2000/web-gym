@@ -120,11 +120,30 @@
                 </div>
                 <div class="col-md-9">
                     <!-- toolbar -->
-                    <div class="row toolbar">
+                    <div class="toolbar">
+                        <div class="row">
+                            <div class="filters">
+                                <label for="cars">Choose a car:</label>
 
+                                <select name="cars" id="cars">
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                            </div>
+                            <div class="modes">
+                                <span class="active">
+                                    <ion-icon name="grid-outline"></ion-icon>
+                                </span>
+                                <span>
+                                    <ion-icon name="menu-outline"></ion-icon>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                     <!-- product list-->
-                    <div class="row product-list"></div>
+                    <div class="product-list"></div>
                 </div>
             </div>
         </div>
@@ -134,7 +153,7 @@
 
 
     <!-- footer -->
-
+    <footer></footer>
     <!-- footer -->
     <script src="../public/js/jquery-3.6.0.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
