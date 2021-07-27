@@ -10,16 +10,18 @@
 :root{
     --color-nav: rgb(34, 34, 34);
     --color-title: rgb(36, 36, 36);
-    --color-text: rgb(36, 36, 36);
+    --color-text: #000000CC;
     --font-size-title: 14px;
     --font-size-label: 16px;
     --font-size-text: 14px;
+    --max-with-page: 1200px;
 }
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     color: rgb(125, 125, 125);
     line-height: 1.5;
+    background-color: #f5f5f5;
 }
 a{
     text-decoration: none;
@@ -45,7 +47,7 @@ input:focus, select:focus{
 /*  */
 /* header-top */
 .header-top{
-    max-width: 1200px;
+    max-width: var(--max-with-page);
     height: 100px;
     margin: auto;
 }
@@ -88,7 +90,7 @@ input:focus, select:focus{
     height: 50px;
 }
 .header-bottom .row{
-    max-width: 1200px;
+    max-width: var(--max-with-page);
     margin: auto;
     height: 100%;
     display: flex;
@@ -146,7 +148,7 @@ input:focus, select:focus{
 .container{
     position: relative;
     display: block;
-    max-width: 1200px;
+    max-width: var(--max-with-page);
     margin: auto;
     padding: 1rem 0;
 }
@@ -178,26 +180,39 @@ input:focus, select:focus{
     width: 100%;
 }
 .product .row .col-md-3{
-    flex: 0 0 25%;
+    flex: 0 0 20%;
     width: 100%;
     padding-right: 20px;
 }
 .product .row .col-md-9{
-    flex: 0 0 75%;
+    flex: 0 0 80%;
     width: 100%;
     position: relative;
 }
 /* col-md-3 */
-.product .row .col-md-3 h3{
-    text-transform: uppercase;
-    color: var(--color-title);
-    background-color: rgb(0,0,0,0.1);
-    padding: 10px 15px;
+.product .row .col-md-3 .product-header{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    color: rgb(0,0,0,0.8);
+    border-bottom: 1px solid rgb(0,0,0,0.1);
+    line-height: 2.5rem;
+    padding-bottom: 10px;
 }
-.sidebar{
+.product .row .col-md-3 .product-header ion-icon{
+    font-size: 20px;
+    vertical-align: text-top;
+    padding-right: 10px;
+}
+.product .row .col-md-3 .product-header span{
+    font-size: var(--font-size-label);
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.product-sidebar{
     position: relative;
 }
-.sidebar ul{
+.product-sidebar ul{
     list-style: none;
     width: 100%;
     height: auto;
@@ -205,40 +220,39 @@ input:focus, select:focus{
     top: 0;
     padding-right: 10px;
 }
-.sidebar ul li{
+.product-sidebar ul li{
     line-height: 40px;
     cursor: pointer;
-    border-bottom: 1px solid rgb(0,0,0,0.2);
     padding-left: 15px;
 }
-.sidebar ul li .sub-menu{
+.product-sidebar ul li .sub-menu{
     display: none;
 }
-.sidebar ul li a, .sidebar ul li span{
-    color: var(--color-title);
+.product-sidebar ul li a, .product-sidebar ul li span{
+    color: var(--color-text);
     font-size: var(--font-size-title);
-    font-weight: 700;
-    text-transform: uppercase;
-    display: block;
+    font-weight: 600;
+    padding: 5px;
+    line-height: 1.125rem;
 }
-.sidebar ul ul li{
+.product-sidebar ul ul li{
     list-style: none;
     line-height: 30px;
     padding-left: 30px;
     border-bottom: none;
 }
-.sidebar ul li ion-icon{
+.product-sidebar ul li ion-icon{
     font-size: 16px;
     float: right;
     margin-top: 10px;
     transition: 0.5s
 }
-.sidebar ul li ion-icon.rotate{
+.product-sidebar ul li ion-icon.rotate{
     transform: rotate(90deg);
 }
-.sidebar ul ul li a{
+.product-sidebar ul ul li a{
     font-size: var(--font-size-title);
-    font-weight: 600;
+    font-weight: 500;
     text-transform: none;
 }
 /* col-md-3 */
@@ -255,11 +269,14 @@ input:focus, select:focus{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4px 0;
+    line-height: 2.5rem;
+    padding-bottom: 10px;
 }
 .product .row .col-md-9 .toolbar .row .filters label{
     padding: 10px 0;
-    font-size: var(--font-size-label);
+    font-size: var(--font-size-text);
+    color: var(--color-text);
+    font-weight: 600;
 }
 .product .row .col-md-9 .toolbar .row .filters select{
     padding: 5px;
@@ -287,7 +304,7 @@ input:focus, select:focus{
 }
 .product .row .col-md-9 .product-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 13rem));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 14rem));
     align-content: space-between;
     justify-content: space-between;
     -webkit-box-align: start;
@@ -299,6 +316,7 @@ input:focus, select:focus{
     display: block;
     padding: 5px;
     border: 1px solid transparent;
+    background-color: #fff;
     transition: all 0.2s;
 }
 .product .row .col-md-9 .product-list .product-item .row{
@@ -374,9 +392,60 @@ input:focus, select:focus{
 /* Product */
 /* footer */
 footer{
-    display: block;
     width: 100%;
-    height: 300px;
-    background-color: cornflowerblue;
+}
+footer .row{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: var(--max-with-page);
+    height: 100%;
+    margin: auto;
+}
+footer .row .col-md-4{
+    flex: 0 0 33.33%;
+    padding: 10px;
+}
+footer .row .infor{
+    background-color: chartreuse;
+}
+footer .row .social h6{
+    font-size: var(--font-size-title);
+    font-weight: 600;
+    color: var(--color-title);
+    text-transform: uppercase;
+}
+footer .row .social .infor-social .list-icon-social{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 5px 0;
+}
+footer .row .social .infor-social .list-icon-social ion-icon{
+    padding-right: 20px;
+    font-size: 28px;
+    color: rgb(0,0,0,0.8);
+    cursor: pointer;
+}
+footer .row .social .bank{
+    margin-top: 20px;
+}
+footer .row .social .bank .list-bank{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 5px 0;
+    flex-wrap: wrap;
+}
+footer .row .social .bank .list-bank img{
+    width: 50px;
+    margin-right: 20px;
+    padding: 5px;
+}
+footer .row  .map{
+    background: rgb(226, 226, 1);
+}
+footer .row  .map iframe{
+    width: 100%;
+    height: 250px;
 }
 /* footer */

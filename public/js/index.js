@@ -16,7 +16,7 @@ $(document).ready(() => {
         speed: 800,
     })
     //
-    Array.from($('.sidebar ul li span')).forEach(element => {
+    Array.from($('.product-sidebar ul li span')).forEach(element => {
         $(element).click(() => {
             $(element).next('.sub-menu').slideToggle();
             $(element).children().toggleClass('rotate')
