@@ -16,10 +16,10 @@ $(document).ready(() => {
         speed: 800,
     })
     //
-    Array.from($('.product-sidebar ul li span')).forEach(element => {
+    Array.from($('.product-sidebar ul li')).forEach(element => {
         $(element).click(() => {
-            $(element).next('.sub-menu').slideToggle();
-            $(element).children().toggleClass('rotate')
+            $(element).children().next('.sub-menu').slideToggle();
+            $(element).children().children().toggleClass('rotate')
         })
     })
     //
