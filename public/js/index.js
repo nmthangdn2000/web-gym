@@ -32,4 +32,17 @@ $(document).ready(() => {
             $(mode).addClass('active')
         })
     })
+    //
+    $(window).on('scroll', () => {
+        if ($(window).scrollTop() > 115){
+            $('header .fixed').addClass('fixed-nav')
+            $('header .fixed').css('top', '0')
+            $('.container').css('padding-top', '7.75rem')
+        }
+        else{
+            $('header .fixed').removeClass('fixed-nav')
+            $('header .fixed').css('top', '-80%')
+            $('.container').css('padding-top', '')
+        }
+    })
 })
