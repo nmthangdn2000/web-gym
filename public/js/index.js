@@ -46,6 +46,19 @@ $(document).ready(() => {
         }
     })
     $('#btn-toggler').on('click', () => {
-        $('.header-top .row nav').toggleClass('active')        
+        $('.header-top .row nav').addClass('active')    
+        $('#cover').addClass('cover')      
+        $('.search-box.search-box-bg').removeClass('active')
+    })
+    $('#close-nav').on('click', () => {
+        $('.header-top .row nav').removeClass('active')
+        $('#cover').removeClass('cover')          
+    })
+    $('#cover').on('click', () => {
+        $('.header-top .row nav').removeClass('active')
+        $('#cover').removeClass('cover')   
+    })
+    $('#btn-open-search-box').on('click', () => {
+        $('.search-box.search-box-bg').toggleClass('active')
     })
 })

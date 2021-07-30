@@ -51,8 +51,7 @@ input:focus, select:focus{
 /* fixed-nav */
 .fixed-nav{
     position: fixed; 
-    overflow: hidden;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     background: var(--bacground);
     top: -80%;
@@ -213,12 +212,16 @@ input:focus, select:focus{
     display: inline-block;
     margin-left: 15px;
 }
+.header-bottom .row  .header-user-shortcut ul li:nth-child(1){
+    display: none;
+}
 .header-bottom .row  .header-user-shortcut ul li > a{
     padding: 8px;
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 .header-bottom .row  .header-user-shortcut ul li > a > ion-icon{
     font-size: 20px;
@@ -698,6 +701,7 @@ footer .footer-top ul li a:hover{
         width: 100%;
         justify-content: flex-end;
         border-bottom: 1px solid rgb(0,0,0,0.1);
+        cursor: pointer;
     }
     .fixed-nav .row .header-top .row nav .close-nav ion-icon{
         font-size: 25px;
@@ -721,10 +725,20 @@ footer .footer-top ul li a:hover{
     .header-bottom .row .header-user-shortcut{
         flex: 0 0 80%;
     }
+    .header-bottom .row  .header-user-shortcut ul li:nth-child(1){
+        display: inline-block;
+    }
     .header-bottom .row .search-box.search-box-bg{
         position: absolute;
         width: 80%;
         top: 100%;
+        display: none;
+    }
+    .fixed-nav .row .header-bottom .row .search-box.search-box-bg{
+        top: 118%;
+    }
+    .header-bottom .row .search-box.search-box-bg.active{
+        display: block;
     }
     .fixed-nav .row .header-top{
         flex: 0 0 25%;
@@ -778,4 +792,13 @@ footer .footer-top ul li a:hover{
     .fixed-nav .row .header-bottom .row{
         flex-direction: row-reverse;
     }
+}
+.cover{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
