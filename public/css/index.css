@@ -162,8 +162,19 @@ input:focus, select:focus{
 .header-bottom .row .btn-toggler{
     display: none;
     font-size: 25px;
-    color: #fff;
     line-height: 10px;
+}
+.header-bottom .row .btn-toggler ion-icon{
+    cursor: pointer;
+    color: #fff;
+    padding: 3px;
+    background: transparent;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+.header-bottom .row .btn-toggler ion-icon:hover{
+    color: var(--color-text);
+    background: #fff;
 }
 .header-bottom .row .search-box{
     flex: 0 0 80%;
@@ -666,9 +677,14 @@ footer .footer-top ul li a:hover{
         left: 0;
         top: 0;
         width: 40%;
+        transform: translateX(-100%);
         z-index: 3;
         background: #fff;
         height: 100%;
+        transition: all 0.3s;
+    }
+    .fixed-nav .row .header-top .row nav.active{
+        transform: translateX(0);
     }
     .fixed-nav .row .header-top .row nav ul li{
         display: block;
@@ -697,7 +713,7 @@ footer .footer-top ul li a:hover{
         flex: 0 0 25%;
     }
 }
-@media only screen and (max-width: 768px){
+@media all and (max-width: 768px){
     .header-bottom .row .search-box{
         flex: 0 0 0%;
         z-index: 2;
@@ -710,9 +726,21 @@ footer .footer-top ul li a:hover{
         width: 80%;
         top: 100%;
     }
+    .fixed-nav .row .header-top{
+        flex: 0 0 25%;
+    }
+    .fixed-nav .row .header-bottom{
+        flex: 0 0 75%;
+    }
+    .header-bottom .row{
+        justify-content: space-between;
+    }
     .header-bottom .row .btn-toggler{
-        flex: 0 0 20%;
         display: block;
+    }
+    .fixed-nav .row  .header-bottom .row .btn-toggler{
+        display: block;
+        margin-left: 15px;
     }
     .header-top .row nav{
         flex: 0 0 0%;
@@ -720,9 +748,14 @@ footer .footer-top ul li a:hover{
         left: 0;
         top: 0;
         width: 40%;
+        transform: translateX(-100%);
         z-index: 3;
         background: #fff;
         height: 100%;
+        transition: all 0.3s;
+    }
+    .header-top .row nav.active{
+        transform: translateX(0);
     }
     .header-top .row nav ul li{
         display: block;
@@ -738,5 +771,11 @@ footer .footer-top ul li a:hover{
         font-size: 25px;
         line-height: 2rem;
         border-left: 1px solid rgb(0,0,0,0.1);
+    }
+    .fixed-nav .row .header-bottom .row .header-user-shortcut{
+        flex: 1;
+    }
+    .fixed-nav .row .header-bottom .row{
+        flex-direction: row-reverse;
     }
 }

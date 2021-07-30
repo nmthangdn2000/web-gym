@@ -45,4 +45,7 @@ $(document).ready(() => {
             $('.container').css('padding-top', '')
         }
     })
+    $('#btn-toggler').on('click', () => {
+        $('.header-top .row nav').toggleClass('active')        
+    })
 })
