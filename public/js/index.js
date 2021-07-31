@@ -50,9 +50,9 @@ $(document).ready(() => {
         $('.header-top .row nav').removeClass('active')
         $('#cover').removeClass('cover')
     })
-    $('#cover').on('click', () => {
+    $('#cover').on('click', function ()  {
         $('.header-top .row nav').removeClass('active')
-        $('#cover').removeClass('cover')
+        $(this).removeClass('cover')
     })
     $('#btn-open-search-box').on('click', () => {
         $('.search-box.search-box-bg').toggleClass('active')
@@ -73,6 +73,15 @@ $(document).ready(() => {
     } else {
         modesColumn()
     }
+    //
+    $('.action-product-item span').hover( function (){
+        $(this).children().attr('name', 'heart')
+    }, function () {
+        $(this).children().attr('name', 'heart-outline')
+    })
+    $('.action-product-item span').on('click', function () {
+        
+    })
 })
 function modesGrid() {
     $('#modes-grid').addClass('active')
