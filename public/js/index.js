@@ -16,12 +16,12 @@ $(document).ready(() => {
         speed: 800,
     })
     //
-    Array.from($('.product-sidebar ul li')).forEach(element => {
-        $(element).click(() => {
-            $(element).children().next('.sub-menu').slideToggle();
-            $(element).children().children().toggleClass('rotate')
-        })
-    })
+    // Array.from($('.product-sidebar ul li')).forEach(element => {
+    //     $(element).click(() => {
+    //         $(element).children().next('.sub-menu').slideToggle();
+    //         $(element).children().children().toggleClass('rotate')
+    //     })
+    // })
     //
     setTimeout(()=>{
         $('#loading-page').animate({opacity: 0}, 1000, () => {

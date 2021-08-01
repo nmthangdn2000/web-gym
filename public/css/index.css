@@ -324,24 +324,35 @@ input:focus, select:focus{
     text-transform: capitalize;
     font-weight: 700;
 }
-.product-sidebar{
-    position: relative;
-}
 .product-sidebar ul{
     list-style: none;
     width: 100%;
     height: auto;
     left: 0;
     top: 0;
-    padding-right: 10px;
 }
-.product-sidebar ul li{
+.product-sidebar ul li, .product-sidebar ul li > ul li{
     line-height: 40px;
     cursor: pointer;
-    padding-left: 15px;
+    padding: 0 5px 0 15px;
+    position: relative;
+}
+.product-sidebar ul li:hover{
+    background: #dbdbdb;
 }
 .product-sidebar ul li .sub-menu{
-    display: none;
+    visibility: hidden;
+    background: var(--bacground-page);
+    position: absolute;
+    left: 100%;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.product-sidebar ul li:hover .sub-menu{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
 }
 .product-sidebar ul li a, .product-sidebar ul li span{
     color: var(--color-text);
