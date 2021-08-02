@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../public/lib/swiper/css/swiper-bundle.css" />
     <link rel="stylesheet" href="../public/lib/swiper/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../public/lib/number-spinner/css/jquery.nice-number.css">
 
     <link rel="stylesheet" href="../public/css/index.css">
 </head>
@@ -100,27 +101,6 @@
     <div id="cover"></div>
     <!-- main -->
     <div class="container">
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="../public/assets/images/slide1.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../public/assets/images/slide2.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../public/assets/images/slide3.jpg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="../public/assets/images/slide4.jpg" alt="">
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-        <!-- Slider main container -->
         <div class="product">
             <div class="row">
                 <div class="col-md-3">
@@ -169,62 +149,59 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <!-- toolbar -->
-                    <div class="toolbar">
-                        <div class="row">
-                            <div class="filters">
-                                <label for="cars">Sắp xếp theo </label>
+                    <div class="product-detail">
+                        <div class="col-md-6">
+                            <div class="product-image">
 
-                                <select name="cars" id="cars">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
-                                </select>
-                            </div>
-                            <div class="modes">
-                                <span id="modes-grid">
-                                    <ion-icon name="grid-outline"></ion-icon>
-                                </span>
-                                <span id="modes-column">
-                                    <ion-icon name="menu-outline"></ion-icon>
-                                </span>
                             </div>
                         </div>
-                    </div>
-                    <!-- product list-->
-                    <div class="product-list" id="product-list">
-                        <a href="../views/detail.html">
-                            <div class="product-item">
-                                <div class="row">
-                                    <div class="img-product-item">
-                                        <img src="https://www.thol.com.vn/pub/media/catalog/product/cache/small_image/300x300/beff4985b56e3afdbeabfc89641a4582/p/a/pancake_1.png"
-                                            alt="">
+                        <div class="col-md-6">
+                            <div class="product-infor">
+                                <div class="product-title">
+                                    <span>Thuốc trừ sâu</span>
+                                </div>
+                                <div class="product-action">
+                                    <div class="action-like">
+                                        <ion-icon name="heart-outline"></ion-icon>
                                     </div>
-                                    <div class="content-product-item">
-                                        <div>
-                                            <span>Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng</span>
-                                        </div>
-                                        <div>
-                                            <ion-icon name="star"></ion-icon>
-                                            <span>
-                                                84 đánh giá
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="product-item-bottom">
-                                        <div class="price-product">
-                                            <span>599.000 ₫</span>
-                                        </div>
-                                        <div class="action-product-item">
-                                            <button>
-                                                <span>Thêm vào giỏ hàng </span>
-                                            </button>
-                                        </div>
+                                    <div class="action-share">
+                                        <ion-icon name="share-social-outline"></ion-icon>
+                                        <ul>
+                                            <li><ion-icon name="logo-facebook"></ion-icon></li>
+                                            <li><ion-icon name="logo-twitter"></ion-icon></li>
+                                            <li><ion-icon name="logo-linkedin"></ion-icon></li>
+                                        </ul>
                                     </div>
                                 </div>
+                                <div class="product-price">
+                                    <span class="price-label">599.000 ₫</span>
+                                    <span class="price">599.000 ₫</span>
+                                </div>
+                                <div class="description">
+                                    <span>
+                                        Whey protein tinh khiết hấp thu nhanh - Hỗ trợ phục hồi cơ bắp sau tập luyện hiệu quả - Nâng cao cường độ tập luyện - Hương vị thơm ngon hấp dẫn dễ dàng pha trộn
+                                    </span>
+                                </div>
+                                <div class="product-amount">
+                                    <label for="product-amount">Số lượng: </label>
+                                    <input type="number" name="amount" id="product-amount" value="1" min="1">
+                                </div>
+                                <div class="product-flavor">
+                                    <label for="product-flavor">Hương vị sản phẩm: </label>
+                                    <select name="flavor" id="product-flavor">
+                                        <option value="volvo">Volvo</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                      </select>
+                                </div>
+                                <div class="add-to-cart">
+                                    <span>
+                                        Thêm vào giỏ hàng
+                                    </span>
+                                </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -315,7 +292,13 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="../public/lib/swiper/js/swiper-bundle.js"></script>
     <script src="../public/lib/swiper/js/swiper-bundle.min.js"></script>
+    <script src="../public/lib/number-spinner/js/jquery.nice-number.js"></script>
     <script src="../public/js/index.js"></script>
+    <script>
+        $(function(){
+            $('input[type="number"]').niceNumber();
+        });
+    </script>
 </body>
 
 </html>

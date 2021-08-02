@@ -109,12 +109,12 @@ $(document).ready(() => {
         modesColumn()
     }
     //
-    $('.action-product-item span').hover(function () {
+    $('.product-action .action-like').hover(function () {
         $(this).children().attr('name', 'heart')
     }, function () {
         $(this).children().attr('name', 'heart-outline')
     })
-    $('.action-product-item span').on('click', function () {
+    $('.product-action .action-like').on('click', function () {
 
     })
 })
