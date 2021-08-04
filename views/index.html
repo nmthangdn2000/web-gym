@@ -316,6 +316,26 @@
     <script src="../public/lib/swiper/js/swiper-bundle.js"></script>
     <script src="../public/lib/swiper/js/swiper-bundle.min.js"></script>
     <script src="../public/js/index.js"></script>
+    <script>
+        $(document).ready(() => {
+            const swiper = new Swiper('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false
+                },
+                speed: 800,
+            })
+        })
+    </script>
 </body>
 
 </html>

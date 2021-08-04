@@ -1,21 +1,5 @@
 $(document).ready(() => {
-    const swiper = new Swiper('.swiper-container', {
-        direction: 'horizontal',
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
-        },
-        speed: 800,
-    })
-   
+    
     //
     setTimeout(() => {
         $('#loading-page').animate({ opacity: 0 }, 1000, () => {
