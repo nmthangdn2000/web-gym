@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../public/lib/number-spinner/css/jquery.nice-number.css">
 
     <link rel="stylesheet" href="../public/css/index.css">
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="Y4sQfd6P"></script>
 </head>
 
 <body>
@@ -99,20 +101,23 @@
     </header>
     <!-- header -->
     <div id="cover"></div>
-    <div class="modal">
-        <div class="modal-container">
-            <div class="modal-header modal-item-center"><h4>Cái j đó ở đây</h4></div>
-            <div class="modal-content">
+    <div class="modal" id="modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-container w-50">
+            <div class="modal-header modal-item-center">
+                <h4>Thuốc trừ sâu</h4>
+            </div>
+            <div class="modal-content"> 
                 <div class="product-modal">
                     <div class="row">
                         <div class="column">
                             <div class="product-amount">
                                 <label for="product-amount">Số lượng: </label>
-                                <input type="number" name="amount" id="product-amount" value="1" min="1">
+                                <input type="number" name="amount" id="product-amount-modal" value="1" min="1">
                             </div>
                             <div class="product-flavor">
-                                <label for="product-flavor">Hương vị sản phẩm: </label>
-                                <select name="flavor" id="product-flavor">
+                                <label for="product-flavor-modal">Hương vị sản phẩm: </label>
+                                <select name="flavor" id="product-flavor-modal">
                                     <option value="volvo">Volvo</option>
                                     <option value="saab">Saab</option>
                                     <option value="mercedes">Mercedes</option>
@@ -120,11 +125,27 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="total">tổng tiền</div>
+                        <div class="column">
+                            <label>Tổng tiền</label>
+                            <h4>599.000 ₫</h4>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">Footer</div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="add-to-cart">
+                        <span>
+                            Đi đến giỏ hàng
+                        </span>
+                    </div>
+                    <div class="add-to-cart">
+                        <span>
+                            Tiếp tục mua sắm
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- main -->
@@ -247,55 +268,59 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="product-infor">
-                                    <div class="product-title">
-                                        <span>Thuốc trừ sâu</span>
-                                    </div>
-                                    <div class="product-action">
-                                        <div class="action-like">
-                                            <ion-icon name="heart-outline"></ion-icon>
+                                    <div>
+                                        <div class="product-title">
+                                            <span>Thuốc trừ sâu</span>
                                         </div>
-                                        <div class="action-share">
-                                            <ion-icon name="share-social-outline"></ion-icon>
-                                            <ul>
-                                                <li>
-                                                    <ion-icon name="logo-facebook"></ion-icon>
-                                                </li>
-                                                <li>
-                                                    <ion-icon name="logo-twitter"></ion-icon>
-                                                </li>
-                                                <li>
-                                                    <ion-icon name="logo-linkedin"></ion-icon>
-                                                </li>
-                                            </ul>
+                                        <div class="product-action">
+                                            <div class="action-like">
+                                                <ion-icon name="heart-outline"></ion-icon>
+                                            </div>
+                                            <div class="action-share">
+                                                <ion-icon name="share-social-outline"></ion-icon>
+                                                <ul>
+                                                    <li>
+                                                        <ion-icon name="logo-facebook"></ion-icon>
+                                                    </li>
+                                                    <li>
+                                                        <ion-icon name="logo-twitter"></ion-icon>
+                                                    </li>
+                                                    <li>
+                                                        <ion-icon name="logo-linkedin"></ion-icon>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="product-price">
+                                            <span class="price-label" data-price="599000" id="product-price">599.000 ₫</span>
+                                            <span class="price">599.000 ₫</span>
                                         </div>
                                     </div>
-                                    <div class="product-price">
-                                        <span class="price-label">599.000 ₫</span>
-                                        <span class="price">599.000 ₫</span>
-                                    </div>
-                                    <div class="description">
-                                        <span>
-                                            Whey protein tinh khiết hấp thu nhanh - Hỗ trợ phục hồi cơ bắp sau tập luyện
-                                            hiệu quả - Nâng cao cường độ tập luyện - Hương vị thơm ngon hấp dẫn dễ dàng
-                                            pha
-                                            trộn
-                                        </span>
-                                    </div>
-                                    <div class="product-amount">
-                                        <label for="product-amount">Số lượng: </label>
-                                        <input type="number" name="amount" id="product-amount" value="1" min="1">
-                                    </div>
-                                    <div class="product-flavor">
-                                        <label for="product-flavor">Hương vị sản phẩm: </label>
-                                        <select name="flavor" id="product-flavor">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="mercedes">Mercedes</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
+                                    <div>
+                                        <div class="description">
+                                            <span>
+                                                Whey protein tinh khiết hấp thu nhanh - Hỗ trợ phục hồi cơ bắp sau tập luyện
+                                                hiệu quả - Nâng cao cường độ tập luyện - Hương vị thơm ngon hấp dẫn dễ dàng
+                                                pha
+                                                trộn
+                                            </span>
+                                        </div>
+                                        <div class="product-amount">
+                                            <label for="product-amount">Số lượng: </label>
+                                            <input type="number" name="amount" id="product-amount" value="1" min="1">
+                                        </div>
+                                        <div class="product-flavor">
+                                            <label for="product-flavor">Hương vị sản phẩm: </label>
+                                            <select name="flavor" id="product-flavor">
+                                                <option value="volvo">Volvo</option>
+                                                <option value="saab">Saab</option>
+                                                <option value="mercedes">Mercedes</option>
+                                                <option value="audi">Audi</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <div class="add-to-cart">
-                                        <span>
+                                        <span id="add-to-cart">
                                             Thêm vào giỏ hàng
                                         </span>
                                     </div>
@@ -323,7 +348,9 @@
                                     chất lượng cao, carbs và chất xơ cùng hàm lượng lí tưởng các vitamin khoáng chất như
                                     canxi, axit folic và sắt.
                                 </div>
-                                <div class="content content-2"></div>
+                                <div class="content content-2">
+                                    <div class="fb-comments" data-href="http://127.0.0.1:5500/views/detail.html" data-width="100%" data-numposts="5"></div>
+                                </div>
                                 <div class="content content-3">
                                     <div class="toolbar">
                                         <div class="row">
@@ -904,89 +931,7 @@
     <script src="../public/lib/number-spinner/js/jquery.nice-number.js"></script>
     <script src="../public/lib/exzoom/js/jquery.elevateZoom-3.0.8.min.js"></script>
     <script src="../public/js/index.js"></script>
-    <script>
-        $(document).ready(() => {
-            const swiper = new Swiper(".mySwiper", {
-                slidesPerView: 5,
-                spaceBetween: 10,
-                watchSlidesVisibility: true,
-                watchSlidesProgress: true,
-                allowTouchMove: false
-            });
-            const swiper2 = new Swiper(".mySwiper2", {
-                spaceBetween: 20,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                thumbs: {
-                    swiper: swiper,
-                },
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true
-                },
-                allowTouchMove: false
-            });
-            $(function () {
-                $('input[type="number"]').niceNumber();
-            });
-            $('.mySwiper2 .swiper-slide-active img').elevateZoom({
-                tint: true,
-                tintColour: '#FFF',
-                tintOpacity: 0.5,
-                zoomWindowFadeIn: 300,
-                zoomWindowFadeOut: 300,
-                lensFadeIn: 300,
-                lensFadeOut: 300
-            });
-            swiper2.on('transitionEnd', function () {
-                $('.mySwiper2 .swiper-slide-active img').elevateZoom({
-                    tint: true,
-                    tintColour: '#FFF',
-                    tintOpacity: 0.5,
-                    zoomWindowFadeIn: 300,
-                    zoomWindowFadeOut: 300,
-                    lensFadeIn: 300,
-                    lensFadeOut: 300
-                });
-            });
-        })
-        var swiper = new Swiper(".mySwiperProductMore", {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            slidesPerGroup: 3,
-            navigation: {
-                nextEl: ".product-more-button-next",
-                prevEl: ".product-more-button-prev",
-            },
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 40
-                },
-                // when window width is >= 480px
-                480: {
-                    slidesPerView: 2,
-                    spaceBetween: 20
-                },
-                580: {
-                    slidesPerView: 3,
-                    spaceBetween: 10
-                },
-                // when window width is >= 640px
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                },
-                900: {
-                    slidesPerView: 4,
-                    spaceBetween: 20
-                }
-            }
-        });
-    </script>
+    <script src="../public/js/detail.js"></script>
 </body>
 
 </html>

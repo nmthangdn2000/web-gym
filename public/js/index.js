@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    
+
     //
     setTimeout(() => {
         $('#loading-page').animate({ opacity: 0 }, 1000, () => {
@@ -61,8 +61,8 @@ $(document).ready(() => {
         $('#cover').addClass('cover')
         $('.product-sidebar .action-sidebar h6').text('Danh mục sản phẩm')
     })
-     // open item list product
-     Array.from($('.product-sidebar ul li')).forEach(element => {
+    // open item list product
+    Array.from($('.product-sidebar ul li')).forEach(element => {
         $(element).click(function () {
             $(this).children('ul').addClass('active')
             $('.product-sidebar .action-sidebar h6').text($(this).children('span').text())
@@ -101,6 +101,7 @@ $(document).ready(() => {
     $('.product-action .action-like').on('click', function () {
 
     })
+    
 })
 function modesGrid() {
     $('#modes-grid').addClass('active')
