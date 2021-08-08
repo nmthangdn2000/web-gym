@@ -7,7 +7,7 @@ $(document).ready(() => {
         })
     }, 200)
     //
-    const fixmeTop = $('.product .row .col-md-3 div').offset().top;
+    // const fixmeTop = $('.product .row .col-md-3 div').offset().top;
     const header = $('.fixed').height();
     $(window).on('scroll', () => {
         const currentScroll = $(window).scrollTop();

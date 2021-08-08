@@ -65,21 +65,25 @@ $(document).ready(() => {
             // when window width is >= 320px
             320: {
                 slidesPerView: 1,
-                spaceBetween: 40
+                spaceBetween: 10,
+                slidesPerGroup: 1,
             },
             // when window width is >= 480px
             480: {
                 slidesPerView: 2,
-                spaceBetween: 20
+                spaceBetween: 20,
+                slidesPerGroup: 1,
             },
             580: {
                 slidesPerView: 3,
-                spaceBetween: 10
+                spaceBetween: 10,
+                slidesPerGroup: 2,
             },
             // when window width is >= 640px
             768: {
                 slidesPerView: 3,
-                spaceBetween: 30
+                spaceBetween: 30,
+                slidesPerGroup: 2,
             },
             900: {
                 slidesPerView: 4,
