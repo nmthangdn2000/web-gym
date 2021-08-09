@@ -54,9 +54,11 @@ $(document).ready(() => {
         });
     });
     const swiperProductMore = new Swiper(".mySwiperProductMore", {
-        slidesPerView: 4,
-        spaceBetween: 20,
-        slidesPerGroup: 3,
+        observer: true,
+        observeParents: true,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
         navigation: {
             nextEl: ".product-more-button-next",
             prevEl: ".product-more-button-prev",
@@ -87,7 +89,8 @@ $(document).ready(() => {
             },
             900: {
                 slidesPerView: 4,
-                spaceBetween: 20
+                spaceBetween: 20,
+                slidesPerGroup: 3,
             }
         }
        
