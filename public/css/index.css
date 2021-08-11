@@ -1358,22 +1358,25 @@ footer .footer-bottom{
     background: #fff;
     border-radius: 4px;
     margin: 2px 0;
-    border: 1px solid transparent;
+    
     transition: border 0.2s;
 }
 .my-cart .header-cart,
 .cart-total-prices{
     position: sticky;
-    top: 70px;
+    top: 60px;
     z-index: 2;
 }
 .my-cart .header-cart{
+    border-top: 20px solid var(--bacground-page);
     border-bottom: 10px solid var(--bacground-page);
 }
-/* .my-cart .my-cart-list .my-cart-list-item{
-    border: 1px solid rgb(51, 68, 102);
-    box-shadow: 0 1px 1px 0 blue, 0 1px 2px 0 blue;
-} */
+.cart-total-prices{
+    border-top: 20px solid var(--bacground-page);
+}
+.my-cart .my-cart-list .my-cart-list-item{
+    border: 1px solid transparent;
+}
 .my-cart .my-cart-list .my-cart-list-item:hover{
     border: 1px solid var(--color-button);
 }
