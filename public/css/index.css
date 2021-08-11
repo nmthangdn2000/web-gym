@@ -78,11 +78,13 @@ input:focus, select:focus{
 .col-md-4{
     flex: 0 0 25%;
     width: 100%;
+    margin-bottom: 2rem;
 }
 .col-md-8{
     flex: 0 0 75%;
     width: 100%;
     position: relative;
+    margin-bottom: 2rem;
 }
 /* loading */
 #loading-page{
