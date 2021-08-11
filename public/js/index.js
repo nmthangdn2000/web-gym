@@ -101,7 +101,8 @@ $(document).ready(() => {
     $('.product-action .action-like').on('click', function () {
 
     })
-    
+    // tag-cart
+    tagCart();
 })
 function modesGrid() {
     $('#modes-grid').addClass('active')
@@ -112,4 +113,28 @@ function modesColumn() {
     $('#modes-column').addClass('active')
     $('#modes-grid').removeClass('active')
     $('#product-list').addClass('list-column')
+}
+
+function tagCart() {
+    let sum = 0;
+    const listAmount = Array.from($('.tag-view .list-item-cart .item-cart .infor-item-cart div span'));
+    const listUnitPrice = Array.from($('.tag-view .list-item-cart .item-cart .price-item-cart'));
+    listAmount.forEach((element, index) => {
+        const a = Number($(element).text());
+        const u = priceToNumber($(listUnitPrice[index]).text());
+        sum += (a * u);
+    });
+    $('.tag-view .tag-cart-bottom .cart-total h4').html(formatPrice(sum));
+
+}
+
+function formatPrice(price) {
+    const formatPrice = new Intl.NumberFormat('it-IT', {style : 'currency', currency : 'VND'});
+    const result = formatPrice.format(price).split(/\s{1}/).join(' ');
+    return result;
+}
+
+function priceToNumber(price) {
+    const result = price.split(' ')[0].split('.').join('');
+    return Number(result);
 }

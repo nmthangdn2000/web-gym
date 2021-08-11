@@ -263,18 +263,18 @@ input:focus, select:focus{
     padding: 10px 15px;
     box-sizing: border-box;
 }
-.header-bottom .row .search-box > form > ion-icon{
+.header-bottom .row .search-box > form > button{
     position: absolute;
     top: 0px;
     right: 0;
-    padding: 8px 8%;
+    padding: 5px 8%;
     border-radius: 0 20px 20px 0;
     border: 1px solid #f48220;
-}
-.header-bottom .row .search-box.search-box-bg > form > ion-icon{
     background-color: #f48220;
+}
+.header-bottom .row .search-box.search-box-bg > form > button ion-icon{
     color: #ffffff;
-    font-size: 17px;
+    font-size: 20px;
 }
 .header-bottom .row .header-user-shortcut ul li{
     display: inline-block;
@@ -410,8 +410,8 @@ input:focus, select:focus{
 }
 .header-bottom .row .header-user-shortcut ul li .tag-cart .list-item-cart .item-cart img{
     flex: 0 0 20%;
-    max-width: 45px;
-    width: 100%;
+    max-width: 50px;
+    max-height: 50px;
 }
 .header-bottom .row .header-user-shortcut ul li .tag-cart h6{
     font-size: var(--font-size-title);
@@ -1840,6 +1840,18 @@ footer .footer-bottom{
     .modal .modal-container .modal-footer .row > div:nth-child(1) > a > span{
         padding: 12px 25px !important;
     }
+    .header-bottom .row .header-user-shortcut ul li .tag-view.tag-cart{
+        width: 350px;
+    }
+    .header-bottom .row .header-user-shortcut ul li .tag-view.tag-cart{
+        transform: translateX(-70%);
+    }
+    .header-bottom .row .header-user-shortcut ul li .tag-cart::after{
+        right: 67px;
+    }
+    .header-bottom .row .header-user-shortcut ul li .tag-cart::before{
+        right: 80px;
+    }
 }
 @media all and (max-width: 768px){
     .product-detail{
@@ -1867,7 +1879,10 @@ footer .footer-bottom{
 
 /* responsive cho bảng giỏ hàng */
 @media all and (max-width: 861px){
-
+    .my-cart .header-cart,
+    .my-cart .my-cart-list .my-cart-list-item{
+        padding-left: 3px;
+    }
     
     .my-cart .product-image{
         flex: 0 0 24%;
@@ -1879,7 +1894,7 @@ footer .footer-bottom{
     }
     .my-cart .header-cart > div:nth-child(2),
     .my-cart .my-cart-list .my-cart-list-item > div:nth-child(2){
-        flex: 0 0 46%;
+        flex: 0 0 41%;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -1887,13 +1902,23 @@ footer .footer-bottom{
     .my-cart .my-cart-list .my-cart-list-item > div:nth-child(2){
         text-align: left;
     }
-
+    .product-flavor select{
+        min-width: 80px;
+        padding: 5px;
+    }
     .my-cart .product-total{
-        flex: 0 0 28%;
+        flex: 0 0 30%;
         white-space: nowrap;
         width: 100%;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    .my-cart .product-action{
+        flex: 0 0 5%;
+    }
+    .my-cart .my-cart-list .my-cart-list-item .product-infor h6{
+        flex: 0 0 100%;
+        padding-left: 0;
     }
     .my-cart .my-cart-list .my-cart-list-item div div{
         margin: 2px 0;
@@ -1902,5 +1927,14 @@ footer .footer-bottom{
     .my-cart .header-cart > div:nth-child(2),
     .my-cart .my-cart-list .my-cart-list-item > div:nth-child(2){
         flex-direction: column;
+    }
+    .my-cart .my-cart-list .my-cart-list-item .product-unit-price span, .my-cart .my-cart-list .my-cart-list-item .product-total span{
+        padding-left: 0;
+    }
+    .my-cart .my-cart-list .my-cart-list-item > div:nth-child(2) .product-unit-price{
+        white-space: nowrap; 
+        width: 110px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
