@@ -601,6 +601,51 @@ input:focus, select:focus{
     border: none;
     padding: 0 !important;
 }
+.modal-success{
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+}
+.modal-success .modal-container{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    --modal-growth-from: 0.7;
+    --modal-growth-to: 1;
+    animation: growth linear 0.1s;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-success .modal-container > *{
+    margin: 10px 0; 
+}
+.modal-success .modal-container img{
+    width: 80px;
+}
+.modal-success .modal-container span{
+    font-size: var(--font-size-text);
+    font-weight: 500;
+    color: #fff;
+}
+.modal-success .modal-container button{
+    font-size: var(--font-size-text);
+    font-weight: 500;
+    border: none;
+    padding: 10px 20px;
+    background: var(--color-button);
+    color: #fff;
+}
 /* Modal */
 /* Slider */
 .slider .swiper-container {
@@ -772,9 +817,13 @@ input:focus, select:focus{
     border: 1px solid rgb(0,0,0,0.1);
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
+.product-item .row .img-product-item{
+    object-fit: contain;
+}
 .product-item .row .img-product-item img{
     width: 100%;
-    object-fit: contain;
+    min-height: 200px;
+    max-height: 200px;
 }
 .product-item .row .content-product-item{
     display: flex;
@@ -784,6 +833,7 @@ input:focus, select:focus{
 .product .row .col-md-9 .product-list.list-column .product-item .row .content-product-item,
 .product .row .col-md-9 .product-list.list-column .product-item .row .product-item-bottom{
     justify-content: flex-start;
+    padding-left: 20px;
 }
 .product-item .row .content-product-item div{
     color: var(--color-text);
@@ -818,7 +868,7 @@ input:focus, select:focus{
 .product .row .col-md-9 .product-list.list-column .product-item .row .product-item-bottom{
     align-items: flex-start;
 }
-.product-item .row .product-item-bottom .price-product span{
+.product-item .row .content-product-item .price-product span{
     font-size: var(--font-size-label);
     line-height: 40px;
     font-weight: 700;
@@ -830,7 +880,7 @@ input:focus, select:focus{
     justify-content: center;
     align-items: center;
     border: none;
-    padding: 5px 20px;
+    padding: 10px 20px;
     border-radius: 3px;
     background: var(--color-button);
     color: #fff;
@@ -859,6 +909,7 @@ input:focus, select:focus{
 .product .row .col-md-9 .product-list.list-column .product-item .row .product-item-bottom{
     flex: 0 0 25%;
     padding-right: 1rem;
+    align-items: center;
 }
 .product .row .col-md-9 .product-list.list-column .product-item .row .img-product-item img{
     width: 80%;

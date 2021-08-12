@@ -103,6 +103,10 @@ $(document).ready(() => {
     })
     // tag-cart
     tagCart();
+    
+    // modal-success
+    setOnClickAddToCart();
+    
 })
 function modesGrid() {
     $('#modes-grid').addClass('active')
@@ -126,6 +130,29 @@ function tagCart() {
     });
     $('.tag-view .tag-cart-bottom .cart-total h4').html(formatPrice(sum));
 
+}
+
+function setOnClickAddToCart() {
+    const btnAddToCart = Array.from($('#product-list a button'));
+    console.log(btnAddToCart);
+    btnAddToCart.forEach((element) => {
+        $(element).on('click', (e) => {
+            e.stopPropagation();    
+            $('#modal-success').css('display', 'flex').delay(2000).hide(0);
+            return false;
+        })
+    });
+    $('#modal-success .modal-container').hover(
+        function(){ 
+            $('#modal-success').stop().show();
+        },
+        function(){
+            $('#modal-success').delay(2000).hide(0);
+        }
+    );
+    $('#modal-success').on('click', () => {
+        $('#modal-success').hide(100);
+    })
 }
 
 function formatPrice(price) {
