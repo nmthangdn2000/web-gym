@@ -105,8 +105,11 @@ $(document).ready(() => {
     tagCart();
     
     // modal-success
-    setOnClickAddToCart();
-    
+    const btnAddToCart = Array.from($('#product-list a button'));
+    const btnAddToCartInslider = Array.from($('#mySwiperProductMore a button'));
+    console.log(btnAddToCartInslider);
+    setOnClickAddToCart(btnAddToCart);
+    setOnClickAddToCart(btnAddToCartInslider);
 })
 function modesGrid() {
     $('#modes-grid').addClass('active')
@@ -132,9 +135,8 @@ function tagCart() {
 
 }
 
-function setOnClickAddToCart() {
-    const btnAddToCart = Array.from($('#product-list a button'));
-    console.log(btnAddToCart);
+function setOnClickAddToCart(btnAddToCart) {
+    
     btnAddToCart.forEach((element) => {
         $(element).on('click', (e) => {
             e.stopPropagation();    
@@ -150,8 +152,9 @@ function setOnClickAddToCart() {
             $('#modal-success').delay(2000).hide(0);
         }
     );
-    $('#modal-success').on('click', () => {
-        $('#modal-success').hide(100);
+    $('#modal-success .modal-success-overlay').on('click', (e) => {
+        e.preventDefault();
+        $('#modal-success').css('display', 'none');
     })
 }
 
