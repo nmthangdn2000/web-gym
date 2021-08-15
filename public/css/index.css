@@ -463,6 +463,24 @@ input:focus, select:focus{
     margin: auto;
     padding: 1rem 0;
 }
+.container .notification{
+    padding: 20px 20px;
+    background: rgb(232, 246, 255);
+    align-items: center;
+    border: 1px solid rgb(13, 92, 182);
+    border-radius: 4px;
+}
+.container .notification span:nth-child(1){
+    font-size: 18px;
+    color: rgb(13, 92, 182);
+    display: flex;
+    align-items: center;
+    float: left;
+}
+.container .notification span:nth-child(2){
+    padding-left: 5px;
+    color: rgb(13, 92, 182);
+}
 /* Modal */
 @keyframes fadeInModal{
     from{
@@ -939,6 +957,7 @@ input:focus, select:focus{
     position: relative;
     width: 100%;
     height: 400px;
+    margin-bottom: 80px;
 }
 /*  */
 .product-detail .col-md-6 .product-image .swiper-container {
@@ -1001,13 +1020,13 @@ input:focus, select:focus{
     background-position: center;
 }
 .product-detail .col-md-6 .product-image .mySwiper2 {
-    height: 80%;
+    height: 100%;
     width: 100%;
     padding: 10px;
 }
 .product-detail .col-md-6 .product-image .swiper-button{
     position: absolute;
-    bottom: 10%;
+    bottom: -8%;
     width: 100%;
     height: auto;
     z-index: 2;
@@ -1021,7 +1040,7 @@ input:focus, select:focus{
     z-index: 2;
 }
 .product-detail .col-md-6 .product-image .mySwiper {
-    bottom: 0%;
+    bottom: -18%;
     height: 20%;
     box-sizing: border-box;
     padding: 10px 0;
@@ -1507,6 +1526,10 @@ footer .footer-bottom{
     font-weight: 500;
     color: var(--color-title);
     text-transform: capitalize;
+    transition: all 0.3 ease;
+}
+.my-cart .my-cart-list .my-cart-list-item .product-infor h6:hover{
+    color: rgb(0, 127, 240);
 }
 .my-cart .my-cart-list .my-cart-list-item .product-flavor select{
     font-size: var(--font-size-title);

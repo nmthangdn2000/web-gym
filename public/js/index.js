@@ -107,7 +107,6 @@ $(document).ready(() => {
     // modal-success
     const btnAddToCart = Array.from($('#product-list a button'));
     const btnAddToCartInslider = Array.from($('#mySwiperProductMore a button'));
-    console.log(btnAddToCartInslider);
     setOnClickAddToCart(btnAddToCart);
     setOnClickAddToCart(btnAddToCartInslider);
 })
@@ -141,6 +140,7 @@ function setOnClickAddToCart(btnAddToCart) {
         $(element).on('click', (e) => {
             e.stopPropagation();    
             $('#modal-success').css('display', 'flex').delay(2000).hide(0);
+            addToCart();
             return false;
         })
     });
@@ -156,6 +156,20 @@ function setOnClickAddToCart(btnAddToCart) {
         e.preventDefault();
         $('#modal-success').css('display', 'none');
     })
+}
+
+function addToCart() {
+    const html = '<div class="item-cart">'
+                + ' <img src="https://o.rada.vn/data/image/2020/11/11/Kho-cuoi-bai-anh-trang-1.jpg"'
+                + '        alt="">'
+                + '     <div class="infor-item-cart">'
+                + '        <span>Thuốc trừ sâu</span>'
+                + '        <div><span>1</span></div>'
+                + '     </div>'
+                + '     <div class="price-item-cart">599.000 VND</div>'
+                + '</div>';
+    $('#list-item-cart').prepend(html)
+    
 }
 
 function formatPrice(price) {

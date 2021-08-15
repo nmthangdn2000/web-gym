@@ -65,7 +65,9 @@
                         <div class="search-box search-box-bg ">
                             <form action="">
                                 <input type="text" name="search-box" placeholder="Tìm sản phẩm ...">
-                                <ion-icon name="search-outline"></ion-icon>
+                                <button type="submit">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                </button>
                             </form>
                         </div>
                         <div class="header-user-shortcut text-align-right">
@@ -86,7 +88,7 @@
                                     </a>
                                     <div class="tag-view tag-cart">
                                         <h6>Sản phẩm mới thêm</h6>
-                                        <div class="list-item-cart">
+                                        <div class="list-item-cart" id="list-item-cart">
                                             <div class="item-cart">
                                                 <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
                                                     alt="">
@@ -180,7 +182,10 @@
     <div id="cover"></div>
     <!-- main -->
     <div class="container">
-        <div class="notification"> Vì dịch nên ...</div>
+        <div class="notification"> 
+            <span><ion-icon name="alert-circle-outline"></ion-icon></span>
+            <span>Do ảnh hưởng của dịch Covid-19, một số khu vực có thể nhận hàng chậm hơn dự kiến. Tiki đang nỗ lực giao các đơn hàng trong thời gian sớm nhất. Cám ơn sự thông cảm của quý khách!</span>
+        </div>
         <div class="product">
             <div class="row">
                 <div class="col-md-8">
@@ -201,12 +206,16 @@
                         <div class="my-cart-list">
                             <div class="my-cart-list-item">
                                 <div class="product-image">
-                                    <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
+                                    <a href="#">
+                                        <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
                                         alt="">
+                                    </a>
                                 </div>
                                 <div>
                                     <div class="product-infor">
-                                        <h6>thuốc trừ sâu</h6>
+                                        <a href="#">
+                                            <h6>thuốc trừ sâu</h6>
+                                        </a>
                                     </div>
                                     <div class="product-flavor">
                                         <select name="flavor" id="product-flavor">
@@ -231,12 +240,16 @@
                             </div>
                             <div class="my-cart-list-item">
                                 <div class="product-image">
-                                    <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
+                                    <a href="#">
+                                        <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
                                         alt="">
+                                    </a>
                                 </div>
                                 <div>
                                     <div class="product-infor">
-                                        <h6>thuốc trừ sâu</h6>
+                                        <a href="#">
+                                            <h6>thuốc trừ sâu</h6>
+                                        </a>
                                     </div>
                                     <div class="product-flavor">
                                         <select name="flavor" id="product-flavor">
@@ -261,12 +274,16 @@
                             </div>
                             <div class="my-cart-list-item">
                                 <div class="product-image">
-                                    <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
+                                    <a href="#">
+                                        <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
                                         alt="">
+                                    </a>
                                 </div>
                                 <div>
                                     <div class="product-infor">
-                                        <h6>thuốc trừ sâu</h6>
+                                        <a href="#">
+                                            <h6>thuốc trừ sâu</h6>
+                                        </a>
                                     </div>
                                     <div class="product-flavor">
                                         <select name="flavor" id="product-flavor">
@@ -291,12 +308,152 @@
                             </div>
                             <div class="my-cart-list-item">
                                 <div class="product-image">
-                                    <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
+                                    <a href="#">
+                                        <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
                                         alt="">
+                                    </a>
                                 </div>
                                 <div>
                                     <div class="product-infor">
-                                        <h6>thuốc trừ sâu</h6>
+                                        <a href="#">
+                                            <h6>thuốc trừ sâu</h6>
+                                        </a>
+                                    </div>
+                                    <div class="product-flavor">
+                                        <select name="flavor" id="product-flavor">
+                                            <option value="volvo">Volvo a â aa a â a a â a a a a</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
+                                    <div class="product-unit-price"9000"><span>599.000 VND</span></div>
+                                    <div class="product-amount">
+                                        <div class="product-amount">
+                                            <input type="number" name="amount" id="product-amount-modal" value="1"
+                                                min="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-total"><span>0 VND</span></div>
+                                <div class="product-action">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="my-cart-list-item">
+                                <div class="product-image">
+                                    <a href="#">
+                                        <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
+                                        alt="">
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="product-infor">
+                                        <a href="#">
+                                            <h6>thuốc trừ sâu</h6>
+                                        </a>
+                                    </div>
+                                    <div class="product-flavor">
+                                        <select name="flavor" id="product-flavor">
+                                            <option value="volvo">Volvo a â aa a â a a â a a a a</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
+                                    <div class="product-unit-price"9000"><span>599.000 VND</span></div>
+                                    <div class="product-amount">
+                                        <div class="product-amount">
+                                            <input type="number" name="amount" id="product-amount-modal" value="1"
+                                                min="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-total"><span>0 VND</span></div>
+                                <div class="product-action">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="my-cart-list-item">
+                                <div class="product-image">
+                                    <a href="#">
+                                        <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
+                                        alt="">
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="product-infor">
+                                        <a href="#">
+                                            <h6>thuốc trừ sâu</h6>
+                                        </a>
+                                    </div>
+                                    <div class="product-flavor">
+                                        <select name="flavor" id="product-flavor">
+                                            <option value="volvo">Volvo a â aa a â a a â a a a a</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
+                                    <div class="product-unit-price"9000"><span>599.000 VND</span></div>
+                                    <div class="product-amount">
+                                        <div class="product-amount">
+                                            <input type="number" name="amount" id="product-amount-modal" value="1"
+                                                min="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-total"><span>0 VND</span></div>
+                                <div class="product-action">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="my-cart-list-item">
+                                <div class="product-image">
+                                    <a href="#">
+                                        <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
+                                        alt="">
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="product-infor">
+                                        <a href="#">
+                                            <h6>thuốc trừ sâu</h6>
+                                        </a>
+                                    </div>
+                                    <div class="product-flavor">
+                                        <select name="flavor" id="product-flavor">
+                                            <option value="volvo">Volvo a â aa a â a a â a a a a</option>
+                                            <option value="saab">Saab</option>
+                                            <option value="mercedes">Mercedes</option>
+                                            <option value="audi">Audi</option>
+                                        </select>
+                                    </div>
+                                    <div class="product-unit-price"9000"><span>599.000 VND</span></div>
+                                    <div class="product-amount">
+                                        <div class="product-amount">
+                                            <input type="number" name="amount" id="product-amount-modal" value="1"
+                                                min="1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-total"><span>0 VND</span></div>
+                                <div class="product-action">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="my-cart-list-item">
+                                <div class="product-image">
+                                    <a href="#">
+                                        <img src="https://vietnamnongnghiepsach.com.vn/wp-content/uploads/2017/04/techtimex.jpg"
+                                        alt="">
+                                    </a>
+                                </div>
+                                <div>
+                                    <div class="product-infor">
+                                        <a href="#">
+                                            <h6>thuốc trừ sâu</h6>
+                                        </a>
                                     </div>
                                     <div class="product-flavor">
                                         <select name="flavor" id="product-flavor">
