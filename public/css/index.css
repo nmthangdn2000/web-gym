@@ -137,6 +137,9 @@ input:focus, select:focus{
 .fixed-nav .row .header-top .row .logo{
     flex: 0 0 30%;
 }
+.fixed-nav .row .header-top .row .logo > img{
+    max-height: 50px;
+}
 .fixed-nav .row .header-top .row .hotline{
     flex: 0 0 0%;
 }
@@ -178,6 +181,7 @@ input:focus, select:focus{
     display: flex;
     flex-wrap: nowrap;
     height: 100%;
+    padding: 5px 0;
 }
 .header-top .row .logo, .header-top .row .hotline{
     flex: 0 0 20%;
@@ -763,6 +767,48 @@ input:focus, select:focus{
 }
 .product-sidebar ul li ion-icon.rotate{
     transform: rotate(90deg);
+}
+.product-sidebar ul li .sub-menu-checkbox > div{
+    position: relative;
+}
+.product-sidebar ul li .sub-menu-checkbox > div input[type=text]{
+    padding: 10px 40px 10px 8px;
+    border-radius: 4px;
+    border: 1px solid rgb(0,0,0,0.3);
+    margin-left: 5px;
+    width: 90%;
+}
+.product-sidebar ul li .sub-menu-checkbox > div span{
+    position: absolute;
+    right: 25px;
+    top: -2px;
+}
+.menu-checkbox li:hover{
+    background-color: transparent !important;
+}
+.product-sidebar ul li .sub-menu-checkbox ul li{
+    padding: 0 5px;
+    align-items: center;
+    display: flex;
+}
+.product-sidebar ul li .sub-menu-checkbox ul li input[type=checkbox]{
+
+    height: 16px;
+    width: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.product-sidebar ul li .sub-menu-checkbox ul li label{
+    font-size: var(--font-size-title);
+    align-items: center;
+    padding-left: 10px;
+}
+.product-sidebar ul li .sub-menu-checkbox ul{
+    margin-top: 10px;
+    max-height: 160px;
+    min-height: 160px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 /* col-md-3 */
 /* col-md-9 */

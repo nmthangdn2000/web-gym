@@ -4,7 +4,6 @@ $(document).ready(() => {
         spaceBetween: 10,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
-        allowTouchMove: false
     });
     const swiper2 = new Swiper(".mySwiper2", {
         spaceBetween: 20,
@@ -47,10 +46,10 @@ $(document).ready(() => {
             tint: true,
             tintColour: '#FFF',
             tintOpacity: 0.5,
-            zoomWindowFadeIn: 300,
-            zoomWindowFadeOut: 300,
-            lensFadeIn: 300,
-            lensFadeOut: 300
+            zoomWindowFadeIn: 200,
+            zoomWindowFadeOut: 200,
+            lensFadeIn: 200,
+            lensFadeOut: 200
         });
     });
     const swiperProductMore = new Swiper(".mySwiperProductMore", {

@@ -183,28 +183,6 @@
     <!-- main -->
     <div class="container">
         <!-- Slider main container -->
-        <div class="slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="../public/assets/images/slide1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../public/assets/images/slide2.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../public/assets/images/slide3.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../public/assets/images/slide4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-        <!-- Slider main container -->
         <div class="product">
             <div class="row">
                 <div class="col-md-3">
@@ -225,29 +203,87 @@
                                     <ion-icon name="close-outline"></ion-icon>
                                 </div>
                             </div>
-                            <ul>
-                                <li><a href="../views/filter.html">Sản phẩm 1</a></li>
+                            <ul class="menu-checkbox">
+                                <li><a href="">Sản phẩm 1</a></li>
                                 <li>
                                     <span>Sản phẩm 2
                                         <ion-icon name="chevron-forward-outline"></ion-icon>
                                     </span>
-                                    <ul class="sub-menu">
-                                        <li><a href="../views/filter.html">Item 1</a></li>
-                                        <li><a href="../views/filter.html">Item 2</a></li>
+                                    <ul class="sub-menu-checkbox">
+                                        <div>
+                                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                                            <span>
+                                                <ion-icon name="search-outline"></ion-icon>
+                                            </span>
+                                        </div>
+                                        <ul id="myUL">
+                                            <li>
+                                                <input type="checkbox" name="" id="01" value="01">
+                                                <label for="01">User01</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="02" value="02">
+                                                <label for="02">User02</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="03" value="03">
+                                                <label for="03">User0</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="04" value="04">
+                                                <label for="04">User04</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="01" value="01">
+                                                <label for="01">User01</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="02" value="02">
+                                                <label for="02">User02</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="03" value="03">
+                                                <label for="03">User0</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="04" value="04">
+                                                <label for="04">User04</label>
+                                            </li>
+                                        </ul>
                                     </ul>
                                 </li>
                                 <li>
                                     <span>Sản phẩm 2
                                         <ion-icon name="chevron-forward-outline"></ion-icon>
                                     </span>
-                                    <ul class="sub-menu">
-                                        <li><a href="../views/filter.html">Item 1</a></li>
-                                        <li><a href="../views/filter.html">Item 2</a></li>
-                                        <li><a href="../views/filter.html">Item 3</a></li>
-                                        <li><a href="../views/filter.html">Item 4</a></li>
+                                    <ul class="sub-menu-checkbox">
+                                        <div>
+                                            <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Search for names.." title="Type in a name">
+                                            <span>
+                                                <ion-icon name="search-outline"></ion-icon>
+                                            </span>
+                                        </div>
+                                        <ul id="myUL2">
+                                            <li>
+                                                <input type="checkbox" name="" id="001" value="001">
+                                                <label for="001">User001</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="002" value="002">
+                                                <label for="002">User002</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="003" value="003">
+                                                <label for="003">User003</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" name="" id="004" value="004">
+                                                <label for="004">User004</label>
+                                            </li>
+                                        </ul>
                                     </ul>
                                 </li>
-                                <li><a href="../views/filter.html">Sản phẩm 4</a></li>
+                                <li><a href="">Sản phẩm 4</a></li>
                             </ul>
                         </div>
                     </div>
@@ -495,23 +531,31 @@
     <script src="../public/js/index.js"></script>
     <script>
         $(document).ready(() => {
-            const swiper = new Swiper('.swiper-container', {
-                direction: 'horizontal',
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                },
-                speed: 800,
-            })
-        })
+            const menuCheckBox = $('.sub-menu-checkbox');
+            Array.from(menuCheckBox).forEach(element => {
+                $(element).prev().on('click', (e) => {
+                    e.preventDefault();
+                    $(element).slideToggle();
+                });
+            });
+        }); 
+        function myFunction() {
+                var input, filter, ul, li, la, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+
+                for (i = 0; i < li.length; i++) {  
+                    la = li[i].getElementsByTagName("label")[0]; 
+                    txtValue = la.textContent || la.innerText;  
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) { 
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
     </script>
 </body>
 
