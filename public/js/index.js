@@ -37,7 +37,7 @@ $(document).ready(() => {
     $('#btn-toggler').on('click', () => {
         $('.header-top .row nav').addClass('active')
         $('#cover').addClass('cover')
-        $('.search-box.search-box-bg').removeClass('active')
+        $('.search-box').removeClass('active')
     })
     // close sidebar
     $('.close-sidebar').on('click', () => {
@@ -53,7 +53,7 @@ $(document).ready(() => {
         $('.product-sidebar').removeClass('active')
     })
     $('#btn-open-search-box').on('click', () => {
-        $('.search-box.search-box-bg').toggleClass('active')
+        $('.search-box').toggleClass('active')
     })
     // open list product
     $('#list-product').on('click', () => {

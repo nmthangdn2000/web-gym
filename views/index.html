@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../public/lib/swiper/css/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/header.css">
 </head>
 
 <body>
@@ -21,151 +22,141 @@
     <div id="cover"></div>
     <!-- header -->
     <header>
-        <div class="fixed">
+        <div class="header">
             <div class="row">
-                <div class="header-top">
-                    <div class="row align-item-center">
-                        <div class="logo text-align-left">
-                            <img src="../public/assets/images/logo.jpg"
-                                alt="" width="100px">
-                        </div>
-                        <nav>
-                            <div class="action-sidebar">
-                                <div class="back-sidebar">
-                                    <ion-icon name="chevron-back-outline"></ion-icon>
-                                </div>
-                                <h6></h6>
-                                <div class="close-sidebar">
-                                    <ion-icon name="close-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <ul>
-                                <li><a href="../views/index.html" class="active">trang chủ</a></li>
-                                <li><a href="">giới thiệu</a></li>
-                                <li><a href="">liên hệ</a></li>
-                            </ul>
-                        </nav>
-                        <div class="hotline">
-                            <div class="row ">
-                                <img src="https://www.thol.com.vn/pub/static/frontend/Sm/revo/vi_VN/images/header-support.png"
-                                    alt="">
-                                <div class="hotline-infor text-align-left">
-                                    <b>Hotline:</b> 1900 2050 <br>
-                                    Email: sales@thol.com.vn
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-3">
+                    <div class="logo">
+                        <img src="../public/assets/images/logo.jpg" alt="" width="50px">
                     </div>
                 </div>
-                <div class="header-bottom">
-                    <div class="row align-item-center">
-                        <div class="btn-toggler" id="btn-toggler">
-                            <ion-icon name="menu-outline"></ion-icon>
+                <div class="col-md-6">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm tại đây ...">
+                        <span>
+                            <ion-icon name="search-outline"></ion-icon> 
+                            Tìm kiếm
+                        </span>
+                    </div>
+                    <nav>
+                        <div class="action-sidebar">
+                            <div class="back-sidebar">
+                                <ion-icon name="chevron-back-outline"></ion-icon>
+                            </div>
+                            <h6></h6>
+                            <div class="close-sidebar">
+                                <ion-icon name="close-outline"></ion-icon>
+                            </div>
                         </div>
-                        <div class="search-box search-box-bg ">
-                            <form action="">
-                                <input type="text" name="search-box" placeholder="Tìm sản phẩm ...">
-                                <button type="submit">
+                        <ul>
+                            <li><a href="../views/index.html" class="active">trang chủ</a></li>
+                            <li><a href="">giới thiệu</a></li>
+                            <li><a href="">liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3">
+                    <div class="header-user-shortcut text-align-right">
+                        <ul class="icon-responsive">
+                            <li>
+                                <a id="btn-open-search-box">
                                     <ion-icon name="search-outline"></ion-icon>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="header-user-shortcut text-align-right">
-                            <ul>
-                                <li>
-                                    <a id="btn-open-search-box">
-                                        <ion-icon name="search-outline"></ion-icon>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <ion-icon name="heart-outline"></ion-icon>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <ion-icon name="cart-outline"></ion-icon>
-                                    </a>
-                                    <div class="tag-view tag-cart">
-                                        <h6>Sản phẩm mới thêm</h6>
-                                        <div class="list-item-cart" id="list-item-cart">
-                                            <div class="item-cart">
-                                                <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
-                                                <div class="infor-item-cart">
-                                                    <span>Thuốc trừ sâu</span>
-                                                    <div><span>1</span></div>
-                                                </div>
-                                                <div class="price-item-cart">599.000 VND</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn-toggler" id="btn-toggler">
+                                    <ion-icon name="menu-outline"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <ion-icon name="heart-outline"></ion-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../views/cart.html">
+                                    <ion-icon name="cart-outline"></ion-icon>
+                                </a>
+                                <div class="tag-view tag-cart">
+                                    <h6>Sản phẩm mới thêm</h6>
+                                    <div class="list-item-cart" id="list-item-cart">
+                                        <div class="item-cart">
+                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
+                                            <div class="infor-item-cart">
+                                                <span>Thuốc trừ sâu</span>
+                                                <div><span>1</span></div>
                                             </div>
-                                            <div class="item-cart">
-                                                <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
-                                                <div class="infor-item-cart">
-                                                    <span>Thuốc trừ sâu</span>
-                                                    <div><span>10</span></div>
-                                                </div>
-                                                <div class="price-item-cart">599.000 VND</div>
-                                            </div>
-                                            <div class="item-cart">
-                                                <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
-                                                <div class="infor-item-cart">
-                                                    <span>Thuốc trừ sâu</span>
-                                                    <div><span>1</span></div>
-                                                </div>
-                                                <div class="price-item-cart">599.000 VND</div>
-                                            </div>
-                                            <div class="item-cart">
-                                                <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
-                                                <div class="infor-item-cart">
-                                                    <span>Thuốc trừ sâu</span>
-                                                    <div><span>1</span></div>
-                                                </div>
-                                                <div class="price-item-cart">599.000 VND</div>
-                                            </div>
-                                            <div class="item-cart">
-                                                <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
-                                                <div class="infor-item-cart">
-                                                    <span>Thuốc trừ sâu</span>
-                                                    <div><span>1</span></div>
-                                                </div>
-                                                <div class="price-item-cart">599.000 VND</div>
-                                            </div>
-                                            <div class="item-cart">
-                                                <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
-                                                <div class="infor-item-cart">
-                                                    <span>Thuốc trừ sâu</span>
-                                                    <div><span>1</span></div>
-                                                </div>
-                                                <div class="price-item-cart">599.000 VND</div>
-                                            </div>
-                                            <div class="item-cart">
-                                                <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
-                                                <div class="infor-item-cart">
-                                                    <span>Thuốc trừ sâu</span>
-                                                    <div><span>1</span></div>
-                                                </div>
-                                                <div class="price-item-cart">599.000 VND</div>
-                                            </div>
+                                            <div class="price-item-cart">599.000 VND</div>
                                         </div>
-                                        <div class="tag-cart-bottom">
-                                            <div class="cart-total">
-                                                <h6>Tổng tiền</h6>
-                                                <h4>599.000 VND</h4>
+                                        <div class="item-cart">
+                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
+                                            <div class="infor-item-cart">
+                                                <span>Thuốc trừ sâu</span>
+                                                <div><span>10</span></div>
                                             </div>
-                                            <div><a href="../views/cart.html"><button class="btn-cart">Xem giỏ hàng</button></a></div>
+                                            <div class="price-item-cart">599.000 VND</div>
+                                        </div>
+                                        <div class="item-cart">
+                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
+                                            <div class="infor-item-cart">
+                                                <span>Thuốc trừ sâu</span>
+                                                <div><span>1</span></div>
+                                            </div>
+                                            <div class="price-item-cart">599.000 VND</div>
+                                        </div>
+                                        <div class="item-cart">
+                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
+                                            <div class="infor-item-cart">
+                                                <span>Thuốc trừ sâu</span>
+                                                <div><span>1</span></div>
+                                            </div>
+                                            <div class="price-item-cart">599.000 VND</div>
+                                        </div>
+                                        <div class="item-cart">
+                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
+                                            <div class="infor-item-cart">
+                                                <span>Thuốc trừ sâu</span>
+                                                <div><span>1</span></div>
+                                            </div>
+                                            <div class="price-item-cart">599.000 VND</div>
+                                        </div>
+                                        <div class="item-cart">
+                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
+                                            <div class="infor-item-cart">
+                                                <span>Thuốc trừ sâu</span>
+                                                <div><span>1</span></div>
+                                            </div>
+                                            <div class="price-item-cart">599.000 VND</div>
+                                        </div>
+                                        <div class="item-cart">
+                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg" alt="">
+                                            <div class="infor-item-cart">
+                                                <span>Thuốc trừ sâu</span>
+                                                <div><span>1</span></div>
+                                            </div>
+                                            <div class="price-item-cart">599.000 VND</div>
                                         </div>
                                     </div>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <ion-icon name="person-outline"></ion-icon>
-                                    </a>
-                                    <div class="tag-view tag-account">
-                                        <h6>Sản phẩm mới thêm</h6>
-                                        
+                                    <div class="tag-cart-bottom">
+                                        <div class="cart-total">
+                                            <h6>Tổng tiền</h6>
+                                            <h4>599.000 VND</h4>
+                                        </div>
+                                        <div><a href="../views/cart.html"><button class="btn-cart">Xem giỏ hàng</button></a></div>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                </a>
+                                <div class="tag-view tag-account">
+                                    <h6>Sản phẩm mới thêm</h6>
+                                    
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
