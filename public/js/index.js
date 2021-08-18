@@ -35,20 +35,20 @@ $(document).ready(() => {
     })
     // open nav
     $('#btn-toggler').on('click', () => {
-        $('.header-top .row nav').addClass('active')
+        $('nav.nav-header').addClass('active')
         $('#cover').addClass('cover')
         $('.search-box').removeClass('active')
     })
     // close sidebar
     $('.close-sidebar').on('click', () => {
-        $('.header-top .row nav').removeClass('active')
+        $('nav.nav-header').removeClass('active')
         $('.product-sidebar ul li .sub-menu').removeClass('active')
         $('.product-sidebar').removeClass('active')
         $('#cover').removeClass('cover')
     })
     // cover
     $('#cover').on('click', function () {
-        $('.header-top .row nav').removeClass('active')
+        $('nav.nav-header').removeClass('active')
         $(this).removeClass('cover')
         $('.product-sidebar').removeClass('active')
     })
@@ -67,14 +67,14 @@ $(document).ready(() => {
             $(this).children('ul').addClass('active')
             $('.product-sidebar .action-sidebar h6').text($(this).children('span').text())
             $(this).children('ul').css('animation', '0.5s ease 0s 1 normal forwards running slideLeft')
-            $('.product-sidebar .action-sidebar .back-sidebar').children().css('display', 'block')
+            $('.product-sidebar .action-sidebar .back-sidebar').css('visibility', 'visible')
         })
     })
     $('.back-sidebar').on('click', () => {
         $('.product-sidebar .action-sidebar h6').text('Danh mục sản phẩm')
         $(this).children('ul').css('animation', '0.5s ease 0s 1 normal forwards running slideLeft')
         $('.product-sidebar ul li ul.active').css('animation', '0.5s ease 0s 1 normal forwards running slideRight')
-        $('.product-sidebar .action-sidebar .back-sidebar').children().css('display', 'none')
+        $('.product-sidebar .action-sidebar .back-sidebar').css('visibility', 'hidden')
     })
     //
     $('#modes-grid').on('click', () => {
