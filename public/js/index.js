@@ -107,8 +107,9 @@ $(document).ready(() => {
     // modal-success
     const btnAddToCart = Array.from($('#product-list a button'));
     const btnAddToCartInslider = Array.from($('#mySwiperProductMore a button'));
-    setOnClickAddToCart(btnAddToCart);
-    setOnClickAddToCart(btnAddToCartInslider);
+    setArrOnClickAddToCart(btnAddToCart);
+    setArrOnClickAddToCart(btnAddToCartInslider);
+    setOnClickAddToCart($('#add-to-cart'))
 })
 function modesGrid() {
     $('#modes-grid').addClass('active')
@@ -134,15 +135,9 @@ function tagCart() {
 
 }
 
-function setOnClickAddToCart(btnAddToCart) {
-    
+function setArrOnClickAddToCart(btnAddToCart) {
     btnAddToCart.forEach((element) => {
-        $(element).on('click', (e) => {
-            e.stopPropagation();    
-            $('#modal-success').css('display', 'flex').delay(2000).hide(0);
-            addToCart();
-            return false;
-        })
+        setOnClickAddToCart(element);
     });
     $('#modal-success .modal-container').hover(
         function(){ 
@@ -155,6 +150,15 @@ function setOnClickAddToCart(btnAddToCart) {
     $('#modal-success .modal-success-overlay').on('click', (e) => {
         e.preventDefault();
         $('#modal-success').css('display', 'none');
+    })
+}
+
+function setOnClickAddToCart(element) {
+    $(element).on('click', (e) => {
+        e.stopPropagation();    
+        $('#modal-success').css('display', 'flex').delay(2000).hide(0);
+        addToCart();
+        return false;
     })
 }
 

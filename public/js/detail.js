@@ -95,11 +95,11 @@ $(document).ready(() => {
        
     });
      // modal product
-     $('#add-to-cart').on('click', () => {
-        addToCart()
-        totalPrice()
-        $('#modal').css('display', 'flex')
-    })
+    //  $('#add-to-cart').on('click', () => {
+    //     addToCart()
+    //     totalPrice()
+    //     $('#modal').css('display', 'flex')
+    // })
     $('#modal-overlay, .modal-footer .row div:nth-child(2)').on('click', () => {
         hideModalProduct()
     })
@@ -110,14 +110,14 @@ function hideModalProduct() {
     $('#product-flavor').val($('#product-flavor-modal').val())
     $('#modal').css('display', 'none')
 }
-function addToCart() {
-    $('#product-amount-modal').val($('#product-amount').val())
-    $('#product-flavor-modal').val($('#product-flavor').val())
-}
-function totalPrice(){
-    const amount = $('#product-amount-modal').val()
-    const price = $('#product-price').attr('data-price')
-    const total = amount * price
-    const formatPrice = new Intl.NumberFormat('it-IT', {style : 'currency', currency : 'VND'})
-    $('.product-modal .row .column h4').html(formatPrice.format(total))
-}
+// function addToCart() {
+//     $('#product-amount-modal').val($('#product-amount').val())
+//     $('#product-flavor-modal').val($('#product-flavor').val())
+// }
+// function totalPrice(){
+//     const amount = $('#product-amount-modal').val()
+//     const price = $('#product-price').attr('data-price')
+//     const total = amount * price
+//     const formatPrice = new Intl.NumberFormat('it-IT', {style : 'currency', currency : 'VND'})
+//     $('.product-modal .row .column h4').html(formatPrice.format(total))
+// }
