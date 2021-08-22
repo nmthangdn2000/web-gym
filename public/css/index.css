@@ -769,6 +769,7 @@ header .header{
     left: 0;
     top: 0;
     position: relative;
+
 }
 .product-sidebar ul li, .product-sidebar ul ul li{
     width: 100%;
@@ -794,13 +795,14 @@ header .header{
     color: var(--color-text);
     font-size: var(--font-size-title);
     font-weight: 600;
-    padding: 15px;
+    padding: 15px 5px;
     line-height: 1.125rem;
 }
 .product-sidebar ul li ion-icon{
     font-size: 16px;
     float: right;
-    transition: 0.5s
+    transition: 0.5s;
+    color: #333;
 }
 .product-sidebar ul li ion-icon.rotate{
     transform: rotate(90deg);
@@ -824,7 +826,7 @@ header .header{
     background-color: transparent !important;
 }
 .product-sidebar ul li .sub-menu-checkbox ul li{
-    padding: 0 5px;
+    padding: 8px 5px;
     align-items: center;
     display: flex;
 }
@@ -842,10 +844,14 @@ header .header{
 }
 .product-sidebar ul li .sub-menu-checkbox ul{
     margin-top: 10px;
-    max-height: 160px;
-    min-height: 160px;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+.product-sidebar ul li .sub-menu-checkbox ul.active{
+    max-height: 220px;
     overflow-y: auto;
+}
+.product-sidebar ul li .sub-menu-checkbox .see-more-checkbox.active{
+    display: none;
 }
 /* col-md-3 */
 /* col-md-9 */
@@ -1333,6 +1339,8 @@ header .header{
     width: 100%;
     margin-top: 2rem;
     border-left: 1px solid rgb(0, 0, 0, 0.1);
+    border-right: 1px solid rgb(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
 }
 .product-infor-detail nav{
     width: 100%;
