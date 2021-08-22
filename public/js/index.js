@@ -1,5 +1,20 @@
 $(document).ready(() => {
-
+    // check theme
+    const theme = localStorage.getItem('theme');
+    if (theme == 'dark') {
+        $('body').addClass('dark-theme')
+        localStorage.setItem('theme', 'dark');
+        $('#btn-theme span ion-icon').attr('name', 'sunny')
+    } else {
+        $('body').removeClass('dark-theme')
+        localStorage.setItem('theme', 'light');
+        $('#btn-theme span ion-icon').attr('name', 'moon-sharp')
+    }
+    //
+    // setLocationIconTheme();
+    // $( window ).resize(function() {
+    //     setLocationIconTheme();
+    // });
     //
     setTimeout(() => {
         $('#loading-page').animate({ opacity: 0 }, 1000, () => {
@@ -32,6 +47,10 @@ $(document).ready(() => {
         //         position: ''
         //     });
         // }
+    })
+    // theme
+    $('#btn-theme').on('click', () => {
+        changeTheme();
     })
     // open nav
     $('#btn-toggler').on('click', () => {
@@ -103,13 +122,14 @@ $(document).ready(() => {
     })
     // tag-cart
     tagCart();
-    
+
     // modal-success
     const btnAddToCart = Array.from($('#product-list a button'));
     const btnAddToCartInslider = Array.from($('#mySwiperProductMore a button'));
     setArrOnClickAddToCart(btnAddToCart);
     setArrOnClickAddToCart(btnAddToCartInslider);
     setOnClickAddToCart($('#add-to-cart'))
+
 })
 function modesGrid() {
     $('#modes-grid').addClass('active')
@@ -140,10 +160,10 @@ function setArrOnClickAddToCart(btnAddToCart) {
         setOnClickAddToCart(element);
     });
     $('#modal-success .modal-container').hover(
-        function(){ 
+        function () {
             $('#modal-success').stop().show();
         },
-        function(){
+        function () {
             $('#modal-success').delay(2000).hide(0);
         }
     );
@@ -155,7 +175,7 @@ function setArrOnClickAddToCart(btnAddToCart) {
 
 function setOnClickAddToCart(element) {
     $(element).on('click', (e) => {
-        e.stopPropagation();    
+        e.stopPropagation();
         $('#modal-success').css('display', 'flex').delay(2000).hide(0);
         addToCart();
         return false;
@@ -164,20 +184,43 @@ function setOnClickAddToCart(element) {
 
 function addToCart() {
     const html = '<div class="item-cart">'
-                + ' <img src="https://o.rada.vn/data/image/2020/11/11/Kho-cuoi-bai-anh-trang-1.jpg"'
-                + '        alt="">'
-                + '     <div class="infor-item-cart">'
-                + '        <span>Thuốc trừ sâu</span>'
-                + '        <div><span>1</span></div>'
-                + '     </div>'
-                + '     <div class="price-item-cart">599.000 VND</div>'
-                + '</div>';
+        + ' <img src="https://o.rada.vn/data/image/2020/11/11/Kho-cuoi-bai-anh-trang-1.jpg"'
+        + '        alt="">'
+        + '     <div class="infor-item-cart">'
+        + '        <span>Thuốc trừ sâu</span>'
+        + '        <div><span>1</span></div>'
+        + '     </div>'
+        + '     <div class="price-item-cart">599.000 VND</div>'
+        + '</div>';
     $('#list-item-cart').prepend(html)
+
+}
+
+function changeTheme() {
+    const theme = localStorage.getItem('theme');
+    if (theme == 'dark') {
+        $('body').removeClass('dark-theme')
+        localStorage.setItem('theme', 'light');
+        $('#btn-theme span ion-icon').attr('name', 'moon-sharp')
+    } else {
+        $('body').addClass('dark-theme')
+        localStorage.setItem('theme', 'dark');
+        $('#btn-theme span ion-icon').attr('name', 'sunny')
+    }
     
 }
 
+function setLocationIconTheme() {
+    const widthScreen = $(window).width();
+    const widthRight = (widthScreen - 1200);
+    const right = Math.round(0.3 * widthRight);
+    if(widthScreen > 1360)
+        $('#btn-theme').css('right', `${right}px`)
+    else  $('#btn-theme').css('right', '20px')
+}
+
 function formatPrice(price) {
-    const formatPrice = new Intl.NumberFormat('it-IT', {style : 'currency', currency : 'VND'});
+    const formatPrice = new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'VND' });
     const result = formatPrice.format(price).split(/\s{1}/).join(' ');
     return result;
 }

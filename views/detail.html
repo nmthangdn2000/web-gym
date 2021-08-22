@@ -15,7 +15,7 @@
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0" nonce="Y4sQfd6P"></script>
 </head>
 
-<body>
+<body class="light-theme">
     <div id="loading-page">
         <div>
             <span>Loading ...</span>
@@ -48,7 +48,6 @@
                             <input type="text" placeholder="Tìm kiếm tại đây ...">
                             <button>
                                 <ion-icon name="search-outline"></ion-icon> 
-                                Tìm kiếm
                             </button>
                     </div>
                     <div id="cover"></div>
@@ -60,6 +59,11 @@
                                 <a id="btn-open-search-box">
                                     <ion-icon name="search-outline"></ion-icon>
                                 </a>
+                            </li>
+                            <li id="btn-theme">
+                                <span>
+                                    <ion-icon name="sunny"></ion-icon>
+                                </span>
                             </li>
                             <li>
                                 <a class="btn-toggler" id="btn-toggler">
@@ -282,7 +286,7 @@
                                         class="swiper-container mySwiper2">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                                <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" />
                                             </div>
                                             <div class="swiper-slide">
                                                 <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
@@ -311,7 +315,7 @@
                                     <div thumbsSlider="" class="swiper-container mySwiper">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                                <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" />
                                             </div>
                                             <div class="swiper-slide">
                                                 <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
@@ -455,7 +459,7 @@
                                             <div class="product-item">
                                                 <div class="row">
                                                     <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                                        <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png"
                                                             alt="">
                                                     </div>
                                                     <div class="content-product-item">
@@ -583,15 +587,9 @@
                     <div class="row">
                         <div class="product-more">
                             <div>
+                                <hr>
                                 <h6>Sản phẩm tương tự</h6>
-                                <div>
-                                    <div class="product-more-button-prev">
-                                        <ion-icon name="chevron-back-circle-outline"></ion-icon>
-                                    </div>
-                                    <div class="product-more-button-next">
-                                        <ion-icon name="chevron-forward-circle-outline"></ion-icon>
-                                    </div>
-                                </div>
+                                <hr>
                             </div>
                             <div class="swiper-container mySwiperProductMore" id="mySwiperProductMore">
                                 <div class="swiper-wrapper ">
@@ -859,6 +857,14 @@
                                             </div>
                                         </a>
                                     </div>                                     
+                                </div>
+                                <div>
+                                    <div class="product-more-button-prev">
+                                        <ion-icon name="chevron-back-outline"></ion-icon>
+                                    </div>
+                                    <div class="product-more-button-next">
+                                        <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    </div>
                                 </div>
                             </div>
                         </div>
