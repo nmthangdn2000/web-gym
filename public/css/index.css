@@ -33,7 +33,7 @@
     --font-size-title: 14px;
     --font-size-label: 16px;
     --font-size-text: 14px;
-    --max-with-page: 1200px;
+    --max-with-page: 1280px;
 }
 .dark-theme{
     --primary-bacground: #333;
@@ -61,7 +61,7 @@
     --font-size-title: 14px;
     --font-size-label: 16px;
     --font-size-text: 14px;
-    --max-with-page: 1200px;
+    --max-with-page: 1280px;
 }
 ::-webkit-scrollbar {
     width: 6px;
@@ -769,12 +769,11 @@ header .header{
     left: 0;
     top: 0;
     position: relative;
-
 }
 .product-sidebar ul li, .product-sidebar ul ul li{
     width: 100%;
     cursor: pointer;
-    padding: 0 5px 0 15px;
+    padding: 0 5px 0 10px;
     z-index: 2;
 }
 .product-sidebar ul li:hover{
@@ -830,8 +829,54 @@ header .header{
     align-items: center;
     display: flex;
 }
+.product-sidebar ul li .price-range > div{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product-sidebar ul li .price-range > div input{
+    border: 1px solid var(--primary-button);
+    border-radius: 4px;
+    width: 100px;
+    padding: 10px;
+    font-size: var(--font-size-label);
+}
+.product-sidebar ul li .price-range > input[type=range]{
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 1px;
+    background-color: var(--primary-button);
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.product-sidebar ul li .price-range > input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid var(--primary-button);
+}
+.btn-reset{
+    position: sticky;
+    bottom: 10px;
+    padding: 0 10px;
+    z-index: 2;
+}
+.btn-reset button {
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: var(--primary-button);
+    color: var(--color-text-in-button);
+}
 .product-sidebar ul li .sub-menu-checkbox ul li input[type=checkbox]{
-
     height: 16px;
     width: 16px;
     border-radius: 4px;
@@ -841,13 +886,16 @@ header .header{
     font-size: var(--font-size-title);
     align-items: center;
     padding-left: 10px;
+    width: 100%;
+    color: var(--color-text);
+    cursor: pointer;
 }
 .product-sidebar ul li .sub-menu-checkbox ul{
     margin-top: 10px;
     overflow: hidden;
 }
 .product-sidebar ul li .sub-menu-checkbox ul.active{
-    max-height: 220px;
+    max-height: 300px;
     overflow-y: auto;
 }
 .product-sidebar ul li .sub-menu-checkbox .see-more-checkbox.active{
@@ -908,8 +956,8 @@ header .header{
 .product .row .col-md-9 .product-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 14rem));
-    align-content: space-between;
-    justify-content: center;
+    align-content: center;
+    justify-content: space-between;
     -webkit-box-align: start;
     grid-gap: 1rem 0.5rem;
 }
@@ -1992,12 +2040,15 @@ footer .footer-bottom{
         left: 0;
         background-color: var(--background-sidebar);
         min-width: 300px;
+        max-width: 300px;
         height: 100%;
         z-index: 3;
         overflow: hidden;
         transform: translate(-100%);
         transition: transform 0.3s;
         z-index: 4;
+        overflow-x: hidden;
+        overflow-y: auto;
     }
     .product-sidebar.active{
         transform: translate(0);
