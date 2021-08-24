@@ -183,6 +183,12 @@
     <!-- main -->
     <div class="container">
         <!-- Slider main container -->
+        <ul class="breadcrumb">
+            <li><a href="">Trang Chủ</a></li>
+            <li><a href="">Trang Chủ</a></li>
+            <li><a href="">Trang Chủ</a></li>
+        </ul>
+        <h1>Thuốc trừ sâu</h1>
         <div class="product">
             <div class="row">
                 <div class="col-md-3">
@@ -655,7 +661,7 @@
                 const valPercent = (valueAsNumber  - parseInt(min)) / (parseInt(max) - parseInt(min));
                 const style = 'background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop('+ valPercent+', #f5f6f8), color-stop('+ valPercent+', var(--primary-button)));';
                 this.style = style;
-                $('#min-price').val(formatPrice(valueAsNumber));
+                $('#min-price').val(formatPriceRange(valueAsNumber));
             });
             $('#reset').on('click', () => {
                 const range = document.getElementById('range');
@@ -736,11 +742,11 @@
             const minInput = $('#min-price');
             const maxInput = $('#max-price');
             if(minInput.val())
-                minInput.val(formatPrice(minInput.val()));
-            else minInput.attr('placeholder', formatPrice(minInput.attr('placeholder')));
-            maxInput.val(formatPrice(maxInput.val()));
+                minInput.val(formatPriceRange(minInput.val()));
+            else minInput.attr('placeholder', formatPriceRange(minInput.attr('placeholder')));
+            maxInput.val(formatPriceRange(maxInput.val()));
         }
-        function formatPrice(number) {
+        function formatPriceRange(number) {
             const formatPrice = new Intl.NumberFormat('it-IT', {style : 'currency', currency : 'VND'});
             const result = formatPrice.format(number).split(/\s{1}/).join(' ');
             const price = result.split(" ")[0].split(".").join(" ")
