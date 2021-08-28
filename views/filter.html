@@ -212,16 +212,6 @@
                                 </div>
                                 <ul class="menu-checkbox">
                                     <li>
-                                        <div class="price-range">
-                                            <div>
-                                                <input type="text" id="min-price" placeholder="300000">
-                                                -
-                                                <input type="text" id="max-price" value="5000000" placeholder="5000000">
-                                            </div>
-                                            <input type="range" id="range" name="range" min="300000" max="5000000" value="50"/>
-                                        </div>
-                                    </li>
-                                    <li>
                                         <span>Sản phẩm 2
                                             <ion-icon name="chevron-forward-outline"></ion-icon>
                                         </span>
@@ -239,15 +229,15 @@
                                                     <label for="01">User01 User01 User01 User01 User01</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="" id="02" value="02">
+                                                    <input type="checkbox" name="checkbox2" id="02" value="02">
                                                     <label for="02">User02</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="" id="03" value="03">
+                                                    <input type="checkbox" name="checkbox3" id="03" value="03">
                                                     <label for="03">User0</label>
                                                 </li>
                                                 <li>
-                                                    <input type="checkbox" name="" id="04" value="04">
+                                                    <input type="checkbox" name="checkbox4" id="04" value="04">
                                                     <label for="04">User04</label>
                                                 </li>
                                                 <li>
@@ -267,7 +257,7 @@
                                                     <label for="04">User04</label>
                                                 </li>
                                             </ul>
-                                            <span class="see-more-checkbox" style="color: blue" >Xem thêm</span>
+                                            <span class="see-more-checkbox">Xem thêm</span>
                                         </ul>
                                     </li>
                                     <li>
@@ -295,10 +285,33 @@
                                             </ul>
                                         </ul>
                                     </li>
-                                    <li><a href="">Sản phẩm 4</a></li>
+                                    <li>
+                                        <span>Giá bán
+                                            <ion-icon name="chevron-forward-outline"></ion-icon>
+                                        </span>
+                                        <div class="sub-menu-checkbox price-range">
+                                            <div>
+                                                <input type="text" id="min-price" name="min-price" placeholder="300000">
+                                                -
+                                                <input type="text" id="max-price" name="max-price" value="100000000" placeholder="100000000">
+                                            </div>
+                                            <div class="multi-range-slider">
+                                                <input type="range" id="input-left" step="50000" min="300000" max="100000000" value="300000">
+                                                <input type="range" id="input-right" step="50000" min="300000" max="100000000" value="100000000">
+                                        
+                                                <div class="slider-input-range">
+                                                    <div class="track"></div>
+                                                    <div class="range"></div>
+                                                    <div class="thumb left"></div>
+                                                    <div class="thumb right"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
                                 </ul>
                                 <div class="btn-reset">
-                                    <button type="reset" id="reset">Đặt lại</button>
+                                    <button type="reset">Đặt lại</button>
+                                    <button type="submit">Lọc</button>
                                 </div>
                             </div>
                         </form>
@@ -653,26 +666,13 @@
     <script src="../public/js/index.js"></script>
     <script>
         $(document).ready(() => {
-            rangePrice();
             formatPriceInput();
-            const range = document.getElementById('range');
-            $("#range").on('input', function () {     
-                const { valueAsNumber, min, max } = this;
-                const valPercent = (valueAsNumber  - parseInt(min)) / (parseInt(max) - parseInt(min));
-                const style = 'background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop('+ valPercent+', #f5f6f8), color-stop('+ valPercent+', var(--primary-button)));';
-                this.style = style;
-                $('#min-price').val(formatPriceRange(valueAsNumber));
-            });
-            $('#reset').on('click', () => {
-                const range = document.getElementById('range');
-                const style = 'background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop('+ 0+', #f5f6f8), color-stop('+ 0+', var(--primary-button)));';
-                range.style = style;
-            })
             const menuCheckBox = $('.sub-menu-checkbox');
             Array.from(menuCheckBox).forEach(element => {
                 $(element).prev().on('click', (e) => {
                     e.preventDefault();
                     $(element).slideToggle();
+                    $(element).prev().children().toggleClass('rotate');
                 });
             });
 
@@ -687,8 +687,86 @@
                     })
                     seeMoreCheckBox(li, subMenuCheckBox[index]);
                 }
-            })
+            });
+            const inputLeft = document.getElementById("input-left");
+            const inputRight = document.getElementById("input-right");
 
+            const thumbLeft = document.querySelector(".slider-input-range > .thumb.left");
+            const thumbRight = document.querySelector(".slider-input-range > .thumb.right");
+            const range = document.querySelector(".slider-input-range > .range");
+
+            function setLeftValue() {
+                const _this = inputLeft,
+                    min = parseInt(_this.min),
+                    max = parseInt(_this.max);
+
+                _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
+
+                const percent = ((_this.value - min) / (max - min)) * 100;
+                if((inputRight.value - _this.value) < inputLeft.step * 3) {
+                    $('.slider-input-range > .thumb.left').css('z-index', 4);
+                    $('#input-left').css('z-index', 4);
+                    $('#input-right').css('z-index', 2);
+                }else {
+                    $('#input-left').css('z-index', 2); 
+                    $('#input-right').css('z-index', 4);
+                }
+                $('#min-price').val(formatPriceRange(_this.value));
+                thumbLeft.style.left = percent + "%";
+                range.style.left = percent + "%";
+            }
+            setLeftValue();
+
+            function setRightValue() {
+                const _this = inputRight,
+                    min = parseInt(_this.min),
+                    max = parseInt(_this.max);
+
+                _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
+
+                const percent = ((_this.value - min) / (max - min)) * 100;
+                if((_this.value - inputLeft.value) < inputRight.step * 3) {
+                    $('.slider-input-range > .thumb.left').css('z-index', 2);
+                    $('#input-left').css('z-index', 2);
+                    $('#input-right').css('z-index', 4);
+                }else {
+                    $('#input-left').css('z-index', 4);
+                    $('#input-right').css('z-index', 2);
+                }
+                $('#max-price').val(formatPriceRange(_this.value));
+                thumbRight.style.right = (100 - percent) + "%";
+                range.style.right = (100 - percent) + "%";
+            }
+            setRightValue();
+
+            inputLeft.addEventListener("input", setLeftValue);
+            inputRight.addEventListener("input", setRightValue);
+
+            inputLeft.addEventListener("mouseover", function() {
+                thumbLeft.classList.add("hover");
+            });
+            inputLeft.addEventListener("mouseout", function() {
+                thumbLeft.classList.remove("hover");
+            });
+            inputLeft.addEventListener("mousedown", function() {
+                thumbLeft.classList.add("active");
+            });
+            inputLeft.addEventListener("mouseup", function() {
+                thumbLeft.classList.remove("active");
+            });
+
+            inputRight.addEventListener("mouseover", function() {
+                thumbRight.classList.add("hover");
+            });
+            inputRight.addEventListener("mouseout", function() {
+                thumbRight.classList.remove("hover");
+            });
+            inputRight.addEventListener("mousedown", function() {
+                thumbRight.classList.add("active");
+            });
+            inputRight.addEventListener("mouseup", function() {
+                thumbRight.classList.remove("active");
+            });
         });
         
         function myFunction(ul, input) {
@@ -730,14 +808,7 @@
                     }
             });
         }
-        function rangePrice(){
-            const range = document.getElementById('range');
-            const { valueAsNumber, min, max } = range;
-            console.log(valueAsNumber);
-            const valPercent = (range.valueAsNumber  - parseInt(range.min)) / (parseInt(range.max) - parseInt(range.min));
-            const style = 'background-image: -webkit-gradient(linear, 0% 0%, 100% 0%, color-stop('+ valPercent+', #f5f6f8), color-stop('+ valPercent+', var(--primary-button)));';
-            range.style = style;
-        }
+
         function formatPriceInput() {
             const minInput = $('#min-price');
             const maxInput = $('#max-price');

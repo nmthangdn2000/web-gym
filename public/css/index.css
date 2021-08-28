@@ -106,12 +106,12 @@ input:focus, select:focus{
     outline: none;
 }
 .col-md-3{
-    flex: 0 0 20%;
+    flex: 0 0 23%;
     width: 100%;
     padding-right: 20px;
 }
 .col-md-9{
-    flex: 0 0 80%;
+    flex: 0 0 77%;
     width: 100%;
     position: relative;
 }
@@ -121,7 +121,7 @@ input:focus, select:focus{
     margin-bottom: 2rem;
 }
 .col-md-6{
-    flex: 0 0 60%;
+    flex: 0 0 54%;
     width: 100%;
     position: relative;
 }
@@ -548,6 +548,7 @@ h1{
     color: var(--color-h6);
     text-transform: uppercase;
     padding-left: 10px;
+    text-align: center;
 }
 /* Modal */
 @keyframes fadeInModal{
@@ -771,10 +772,13 @@ h1{
     width: 100%;
 }
 /* col-md-3 */
+.product .row .col-md-3 > div,
+.product .row .col-md-3 > div {
+    height: calc(100%);
+}
 .product .row .col-md-3 .product-header{
     width: 100%;
     color: rgb(0,0,0,0.8);
-    border-bottom: 1px solid var(--color-hr);
     line-height: 2.1rem;
     padding-bottom: 10px;
     padding-left: 10px;
@@ -795,6 +799,11 @@ h1{
     font-weight: 700;
     color: var(--color-h6);
 }
+.product-sidebar {
+    border-top: 1px solid var(--color-hr);
+    border-right: 1px solid var(--color-hr);
+    height: calc(100% - 50px);
+}
 .product-sidebar ul{
     list-style: none;
     display: inline-block;
@@ -803,6 +812,15 @@ h1{
     left: 0;
     top: 0;
     position: relative;
+}
+.product-sidebar > ul.menu-checkbox > li:not(:last-child):after{
+    content : "";
+    position: absolute;
+    left    : 10px;
+    bottom  : 0;
+    height  : 1px;
+    width   : 90%;  /* or 100px */
+    border-bottom:1px solid var(--color-hr);
 }
 .product-sidebar ul li, .product-sidebar ul ul li{
     width: 100%;
@@ -837,8 +855,11 @@ h1{
     transition: 0.5s;
     color: #333;
 }
-.product-sidebar ul li ion-icon.rotate{
+.product-sidebar ul.menu-checkbox li ion-icon{
     transform: rotate(90deg);
+}
+.product-sidebar ul.menu-checkbox li ion-icon.rotate{
+    transform: rotate(-90deg);
 }
 .product-sidebar ul li .sub-menu-checkbox > div{
     position: relative;
@@ -863,43 +884,27 @@ h1{
     align-items: center;
     display: flex;
 }
-.product-sidebar ul li .price-range > div{
-    margin-top: 1rem;
+.product-sidebar ul li .price-range > div:nth-child(1){
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.product-sidebar ul li .price-range > div input{
+.product-sidebar ul li .price-range > div:nth-child(1) input[type=text]{
     border: 1px solid var(--primary-button);
     border-radius: 4px;
-    width: 100px;
+    width: 115px;
     padding: 10px;
     font-size: var(--font-size-label);
-}
-.product-sidebar ul li .price-range > input[type=range]{
-    margin-top: 0.5rem;
-    width: 100%;
-    height: 1px;
-    background-color: var(--primary-button);
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
-}
-.product-sidebar ul li .price-range > input[type=range]::-webkit-slider-thumb{
-    -webkit-appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid var(--primary-button);
 }
 .btn-reset{
     position: sticky;
     bottom: 10px;
     padding: 0 10px;
     z-index: 2;
+    display: flex;
 }
 .btn-reset button {
+    margin: 0 2px;
     border: none;
     padding: 15px 20px;
     width: 100%;
@@ -908,6 +913,16 @@ h1{
     font-weight: 600;
     text-transform: uppercase;
     background-color: var(--primary-button);
+    color: var(--color-text-in-button);
+    transition: 0.2s ;
+}
+.btn-reset button:nth-child(1){
+    color: var(--color-text);
+    background-color: var(--background-content);
+    border: 1px solid var(--primary-button);
+}
+.btn-reset button:hover{
+    background-color: var(--primary-button-hover);
     color: var(--color-text-in-button);
 }
 .product-sidebar ul li .sub-menu-checkbox ul li input[type=checkbox]{
@@ -931,6 +946,9 @@ h1{
 .product-sidebar ul li .sub-menu-checkbox ul.active{
     max-height: 300px;
     overflow-y: auto;
+}
+.product-sidebar ul li .sub-menu-checkbox .see-more-checkbox{
+    color: var(--color-a);
 }
 .product-sidebar ul li .sub-menu-checkbox .see-more-checkbox.active{
     display: none;
@@ -2081,8 +2099,7 @@ footer .footer-bottom{
         transform: translate(-100%);
         transition: transform 0.3s;
         z-index: 4;
-        overflow-x: hidden;
-        overflow-y: auto;
+        overflow: hidden;
     }
     .product-sidebar.active{
         transform: translate(0);
@@ -2090,8 +2107,10 @@ footer .footer-bottom{
     .product-sidebar .product-sidebar-menu{
         transform: translate(-100%);
     }
-    .product-sidebar ul{
+    .product-sidebar > ul{
         height: 100%;
+        overflow-y: auto;
+        padding-bottom: 6rem;
     }
     .product-sidebar ul li ul{
         position: relative;
@@ -2186,6 +2205,9 @@ footer .footer-bottom{
         padding: 0;
     }
     .my-cart .product-image{
+        padding-right: 10px;
+    }
+    .multi-range-slider{
         padding-right: 10px;
     }
 }
@@ -2313,4 +2335,78 @@ footer .footer-bottom{
         overflow: hidden;
         text-overflow: ellipsis;
     }
+}
+
+.multi-range-slider{
+    margin: 1rem 0 2rem 0;
+    padding: 0 5px 0 10px;
+}
+.slider-input-range {
+	position: relative;
+	z-index: 1;
+	height: 1px;
+}
+.slider-input-range > .track {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: #c6aee7;
+}
+.slider-input-range > .range {
+	position: absolute;
+	z-index: 2;
+	left: 25%;
+	right: 25%;
+	top: 0;
+	bottom: 0;
+	border-radius: 5px;
+	background-color: var(--primary-button);
+}
+.slider-input-range > .thumb {
+	position: absolute;
+	z-index: 3;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid var(--primary-button);
+	box-shadow: 0 0 0 0 var(--primary-button-hover);
+	transition: box-shadow .3s ease-in-out;
+    cursor: grab !important;
+}
+.slider-input-range > .thumb.left {
+	left: 25%;
+	transform: translate(-7px, -10px);
+}
+.slider-input-range > .thumb.right {
+	right: 25%;
+	transform: translate(7px, -10px);
+}
+.slider-input-range > .thumb.hover {
+	box-shadow: 0 0 0 10px rgba(250, 101, 2, 0.2);
+}
+.slider-input-range > .thumb.active {
+	box-shadow: 0 0 0 20px rgba(250, 101, 2, 0.5);
+}
+
+.price-range input[type=range] {
+	position: absolute;
+	pointer-events: none;
+	-webkit-appearance: none;
+	z-index: 20;
+	height: 10px;
+	width: 100%;
+	opacity: 0;
+}
+.price-range input[type=range]::-webkit-slider-thumb {
+	pointer-events: all;
+	width: 30px;
+	height: 30px;
+	border-radius: 0;
+	border: 0 none;
+	-webkit-appearance: none;
 }
