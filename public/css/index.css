@@ -853,7 +853,7 @@ h1{
     font-size: 16px;
     float: right;
     transition: 0.5s;
-    color: #333;
+    color: var(--color-text);
 }
 .product-sidebar ul.menu-checkbox li ion-icon{
     transform: rotate(90deg);
