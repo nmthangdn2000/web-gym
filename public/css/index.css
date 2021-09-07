@@ -509,7 +509,7 @@ header .header{
     margin-right: 10px;
     cursor: pointer;
 }
-.header .row .header-user-shortcut ul li .tag-account > div a > div:not(:nth-child(2)):hover{
+.header .row .header-user-shortcut ul li .tag-account > .tag-user-login a > div:not(:nth-child(2)):hover{
     background-color: var(--color-hr);
 }
 .tag-user > div{
@@ -561,6 +561,64 @@ header .header{
 .header .row .header-user-shortcut ul li .tag-account > div a > .tag-histories > span{
     font-size: var(--font-size-text);
     color: var(--color-h6);
+}
+.tag-account > div{
+    padding: 0 10px;
+}
+.tag-account .tag-user-not-login .tag-input{
+    width: 100%;
+    border-radius: 4px;
+    margin: 8px 0;
+}
+.tag-account .tag-user-not-login .tag-input > div{
+    display: inline-flex;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+}
+.tag-account .tag-user-not-login .tag-input > div{
+    padding: 10px;
+}
+.tag-account .tag-user-not-login .tag-input:hover > div{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.tag-account .tag-input.tag-input-signin{
+    background-color: #198C19;
+}
+.tag-account .tag-input.tag-input-signin > div,
+.tag-account .tag-input.tag-input-signup > div{
+    justify-content: center;
+}
+.tag-account .tag-input.tag-input-signup > div{
+    color: #333;
+}
+.tag-account .tag-input.tag-input-signup{
+    background-color: rgb(253, 216, 53);
+}
+.tag-account .tag-input.tag-input-fb{
+    background-color: rgb(59, 89, 152);
+}
+.tag-account .tag-input.tag-input-gg{
+    background-color: rgb(223, 74, 50);
+}
+.tag-account .tag-input.tag-input-zalo{
+    background-color: rgb(15, 142, 221);
+}
+.tag-account .tag-input > div > div{
+    border-right: 1px solid #dbdbdb;
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tag-account .tag-input.tag-input-fb span,
+.tag-account .tag-input.tag-input-gg span,
+.tag-account .tag-input.tag-input-zalo span{
+    margin-left: 20px;
+}
+.tag-account .tag-input img{
+    width: 20px;
+    text-align: start;
 }
 /* tag-account-after login */
 /* header-bottom */
