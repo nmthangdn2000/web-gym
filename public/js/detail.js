@@ -31,7 +31,7 @@ $(document).ready(() => {
     $("#product-amount-modal").bind('keyup', function () {
         totalPrice()
     });
-    
+
     $('.mySwiper2 .swiper-slide-active img').elevateZoom({
         tint: true,
         tintColour: '#FFF',
@@ -92,9 +92,9 @@ $(document).ready(() => {
                 slidesPerGroup: 3,
             }
         }
-       
+
     });
-     // modal product
+    // modal product
     //  $('#add-to-cart').on('click', () => {
     //     addToCart()
     //     totalPrice()

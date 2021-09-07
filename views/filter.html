@@ -25,7 +25,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="logo">
-                        <img src="../public/assets/images/logo.jpg" alt="">
+                        <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" alt="">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -161,8 +161,46 @@
                                     <ion-icon name="person-outline"></ion-icon>
                                 </a>
                                 <div class="tag-view tag-account">
-                                    <h6>Sản phẩm mới thêm</h6>
+                                    <!-- này là phần user đã login -->
+                                    <div>
+                                        <a href="../views/dashboard.html">
+                                            <div class="tag-user">
+                                                <img src="../public/assets/images/anh.jpg" alt="">
+                                                <div>
+                                                    <span>Xin chào</span>
+                                                    <span>Nguyễn Minh Thắng</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="hr"></div>
+                                        <a href="#">
+                                            <div class="tag-infor-user">
+                                                <ion-icon name="person-circle-outline"></ion-icon>
+                                                <span>Thông tin tài khoản</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-address">
+                                                <ion-icon name="location"></ion-icon>
+                                                <span>Sổ địa chỉ</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-histories">
+                                                <ion-icon name="newspaper-outline"></ion-icon>
+                                                <span>Lịch sử mua hàng</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-log-out">
+                                                <ion-icon name="log-out-outline"></ion-icon>
+                                                <span>Đăng xuất</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- <div>
 
+                                    </div> -->
                                 </div>
                             </li>
                         </ul>
@@ -293,12 +331,15 @@
                                             <div>
                                                 <input type="text" id="min-price" name="min-price" placeholder="300000">
                                                 -
-                                                <input type="text" id="max-price" name="max-price" value="100000000" placeholder="100000000">
+                                                <input type="text" id="max-price" name="max-price" value="100000000"
+                                                    placeholder="100000000">
                                             </div>
                                             <div class="multi-range-slider">
-                                                <input type="range" id="input-left" step="50000" min="300000" max="100000000" value="300000">
-                                                <input type="range" id="input-right" step="50000" min="300000" max="100000000" value="100000000">
-                                        
+                                                <input type="range" id="input-left" step="50000" min="300000"
+                                                    max="100000000" value="300000">
+                                                <input type="range" id="input-right" step="50000" min="300000"
+                                                    max="100000000" value="100000000">
+
                                                 <div class="slider-input-range">
                                                     <div class="track"></div>
                                                     <div class="range"></div>
@@ -409,7 +450,7 @@
                                 </div>
                             </div>
                         </a>
-                         <a href="../views/detail.html">
+                        <a href="../views/detail.html">
                             <div class="product-item">
                                 <div class="row">
                                     <div class="img-product-item">
@@ -703,12 +744,12 @@
                 _this.value = Math.min(parseInt(_this.value), parseInt(inputRight.value) - 1);
 
                 const percent = ((_this.value - min) / (max - min)) * 100;
-                if((inputRight.value - _this.value) < inputLeft.step * 3) {
+                if ((inputRight.value - _this.value) < inputLeft.step * 3) {
                     $('.slider-input-range > .thumb.left').css('z-index', 4);
                     $('#input-left').css('z-index', 4);
                     $('#input-right').css('z-index', 2);
-                }else {
-                    $('#input-left').css('z-index', 2); 
+                } else {
+                    $('#input-left').css('z-index', 2);
                     $('#input-right').css('z-index', 4);
                 }
                 $('#min-price').val(formatPriceRange(_this.value));
@@ -725,11 +766,11 @@
                 _this.value = Math.max(parseInt(_this.value), parseInt(inputLeft.value) + 1);
 
                 const percent = ((_this.value - min) / (max - min)) * 100;
-                if((_this.value - inputLeft.value) < inputRight.step * 3) {
+                if ((_this.value - inputLeft.value) < inputRight.step * 3) {
                     $('.slider-input-range > .thumb.left').css('z-index', 2);
                     $('#input-left').css('z-index', 2);
                     $('#input-right').css('z-index', 4);
-                }else {
+                } else {
                     $('#input-left').css('z-index', 4);
                     $('#input-right').css('z-index', 2);
                 }
@@ -742,33 +783,33 @@
             inputLeft.addEventListener("input", setLeftValue);
             inputRight.addEventListener("input", setRightValue);
 
-            inputLeft.addEventListener("mouseover", function() {
+            inputLeft.addEventListener("mouseover", function () {
                 thumbLeft.classList.add("hover");
             });
-            inputLeft.addEventListener("mouseout", function() {
+            inputLeft.addEventListener("mouseout", function () {
                 thumbLeft.classList.remove("hover");
             });
-            inputLeft.addEventListener("mousedown", function() {
+            inputLeft.addEventListener("mousedown", function () {
                 thumbLeft.classList.add("active");
             });
-            inputLeft.addEventListener("mouseup", function() {
+            inputLeft.addEventListener("mouseup", function () {
                 thumbLeft.classList.remove("active");
             });
 
-            inputRight.addEventListener("mouseover", function() {
+            inputRight.addEventListener("mouseover", function () {
                 thumbRight.classList.add("hover");
             });
-            inputRight.addEventListener("mouseout", function() {
+            inputRight.addEventListener("mouseout", function () {
                 thumbRight.classList.remove("hover");
             });
-            inputRight.addEventListener("mousedown", function() {
+            inputRight.addEventListener("mousedown", function () {
                 thumbRight.classList.add("active");
             });
-            inputRight.addEventListener("mouseup", function() {
+            inputRight.addEventListener("mouseup", function () {
                 thumbRight.classList.remove("active");
             });
         });
-        
+
         function myFunction(ul, input) {
             var filter, ul, li, la, i, txtValue;
             filter = input.value.toUpperCase();
@@ -812,13 +853,13 @@
         function formatPriceInput() {
             const minInput = $('#min-price');
             const maxInput = $('#max-price');
-            if(minInput.val())
+            if (minInput.val())
                 minInput.val(formatPriceRange(minInput.val()));
             else minInput.attr('placeholder', formatPriceRange(minInput.attr('placeholder')));
             maxInput.val(formatPriceRange(maxInput.val()));
         }
         function formatPriceRange(number) {
-            const formatPrice = new Intl.NumberFormat('it-IT', {style : 'currency', currency : 'VND'});
+            const formatPrice = new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'VND' });
             const result = formatPrice.format(number).split(/\s{1}/).join(' ');
             const price = result.split(" ")[0].split(".").join(" ")
             return price;

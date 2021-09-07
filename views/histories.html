@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../public/lib/swiper/css/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="../public/css/index.css">
-    <link rel="stylesheet" href="../public/css/header.css">
 </head>
 
 <body class="light-theme">
@@ -161,7 +160,46 @@
                                     <ion-icon name="person-outline"></ion-icon>
                                 </a>
                                 <div class="tag-view tag-account">
+                                    <!-- này là phần user đã login -->
+                                    <div>
+                                        <a href="../views/dashboard.html">
+                                            <div class="tag-user">
+                                                <img src="../public/assets/images/anh.jpg" alt="">
+                                                <div>
+                                                    <span>Xin chào</span>
+                                                    <span>Nguyễn Minh Thắng</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="hr"></div>
+                                        <a href="#">
+                                            <div class="tag-infor-user">
+                                                <ion-icon name="person-circle-outline"></ion-icon>
+                                                <span>Thông tin tài khoản</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-address">
+                                                <ion-icon name="location"></ion-icon>
+                                                <span>Sổ địa chỉ</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-histories">
+                                                <ion-icon name="newspaper-outline"></ion-icon>
+                                                <span>Lịch sử mua hàng</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-log-out">
+                                                <ion-icon name="log-out-outline"></ion-icon>
+                                                <span>Đăng xuất</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- <div>
 
+                                    </div> -->
                                 </div>
                             </li>
                         </ul>
@@ -200,7 +238,7 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h2>Sổ địa chỉ</h2>
+                    <h2>Quản lý đơn hàng</h2>
                 </div>
             </div>
         </div>
@@ -249,66 +287,60 @@
                     <!-- toolbar -->
                     <div class="content-dashboard">
                         <div class="row">
-                            <div class="dashboard-address-new">
-                                <ion-icon name="add-outline"></ion-icon>
-                                <span>Thêm địa chỉ</span>
+                            <div class="dashboard-orders-table-header">
+                                <table class="orders-table">
+                                    <thead>
+                                        <tr>
+                                            <th width="14%" scope="col">Mã đơn hàng</th>
+                                            <th width="13%" scope="col">Ngày mua</th>
+                                            <th width="40%" scope="col">Sản phẩm</th>
+                                            <th width="15%" scope="col">Tổng tiền</th>
+                                            <th width="18%" scope="col">Trạng thái</th>
+                                        </tr>
+                                    </thead>
+                                </table>
                             </div>
-                            <div class="dashboard-address-item">
-                                <div class="dashboard-address-item-infor">
-                                    <div class="name"><span>Nguyễn Minh Thắng</span></div>
-                                    <div class="address">
-                                        <span>Địa chỉ: </span>
-                                        <span>
-                                            Hòa Nhơn - Hòa Vang - TP. Đà Nẵng
-                                        </span>
-                                    </div>
-                                    <div class="phone">
-                                        <span>Số điện thoại: </span>
-                                        <span>0123456789</span>
-                                    </div>
-                                </div>
-                                <div class="dashboard-address-item-action">
-                                    <a href="">Chỉnh sửa</a>
-                                    <a href="">Xóa</a>
-                                </div>
-                            </div>
-                            <div class="dashboard-address-item">
-                                <div class="dashboard-address-item-infor">
-                                    <div class="name"><span>Nguyễn Minh Thắng</span></div>
-                                    <div class="address">
-                                        <span>Địa chỉ: </span>
-                                        <span>
-                                            Hòa Nhơn - Hòa Vang - TP. Đà Nẵng
-                                        </span>
-                                    </div>
-                                    <div class="phone">
-                                        <span>Số điện thoại: </span>
-                                        <span>0123456789</span>
-                                    </div>
-                                </div>
-                                <div class="dashboard-address-item-action">
-                                    <a href="">Chỉnh sửa</a>
-                                    <a href="">Xóa</a>
-                                </div>
-                            </div>
-                            <div class="dashboard-address-item">
-                                <div class="dashboard-address-item-infor">
-                                    <div class="name"><span>Nguyễn Minh Thắng</span></div>
-                                    <div class="address">
-                                        <span>Địa chỉ: </span>
-                                        <span>
-                                            Hòa Nhơn - Hòa Vang - TP. Đà Nẵng
-                                        </span>
-                                    </div>
-                                    <div class="phone">
-                                        <span>Số điện thoại: </span>
-                                        <span>0123456789</span>
-                                    </div>
-                                </div>
-                                <div class="dashboard-address-item-action">
-                                    <a href="">Chỉnh sửa</a>
-                                    <a href="">Xóa</a>
-                                </div>
+                            <div class="dashboard-order-table">
+                                <table class="orders-table">
+                                    <tbody>
+                                        <tr>
+                                            <td width="14%" scope="col">013446751</td>
+                                            <td width="13%" scope="col">13/07/2021</td>
+                                            <td width="40%" scope="col">Miếng Lót Chuột Dễ Thương Hình Tròn Họa Tiết (
+                                                20cm ) - Chim Cánh Cụt
+                                            </td>
+                                            <td width="15%" scope="col">20.000 ₫</td>
+                                            <td width="18%" scope="col">Giao hàng thành công</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="14%" scope="col">013446751</td>
+                                            <td width="13%" scope="col">13/07/2021</td>
+                                            <td width="40%" scope="col">Miếng Lót Chuột Dễ Thương Hình Tròn Họa Tiết (
+                                                20cm ) - Chim Cánh Cụt
+                                            </td>
+                                            <td width="15%" scope="col">20.000 ₫</td>
+                                            <td width="18%" scope="col">Giao hàng thành công</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="14%" scope="col">013446751</td>
+                                            <td width="13%" scope="col">13/07/2021</td>
+                                            <td width="40%" scope="col">Miếng Lót Chuột Dễ Thương Hình Tròn Họa Tiết (
+                                                20cm ) - Chim Cánh Cụt
+                                            </td>
+                                            <td width="15%" scope="col">20.000 ₫</td>
+                                            <td width="18%" scope="col">Giao hàng thành công</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="14%" scope="col">013446751</td>
+                                            <td width="13%" scope="col">13/07/2021</td>
+                                            <td width="40%" scope="col">Miếng Lót Chuột Dễ Thương Hình Tròn Họa Tiết (
+                                                20cm ) - Chim Cánh Cụt
+                                            </td>
+                                            <td width="15%" scope="col">20.000 ₫</td>
+                                            <td width="18%" scope="col">Giao hàng thành công</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

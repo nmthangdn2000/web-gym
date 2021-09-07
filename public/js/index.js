@@ -80,6 +80,11 @@ $(document).ready(() => {
         $('#cover').addClass('cover')
         $('.product-sidebar .action-sidebar h6').text('Danh mục sản phẩm')
     })
+    $('#menu-dashboard').on('click', () => {
+        $('.product-sidebar').addClass('active')
+        $('#cover').addClass('cover')
+        $('.product-sidebar .action-sidebar h6').text('Danh mục')
+    })
     // open item list product
     Array.from($('.product-sidebar ul li')).forEach(element => {
         $(element).click(function () {
@@ -126,10 +131,19 @@ $(document).ready(() => {
     // modal-success
     const btnAddToCart = Array.from($('#product-list a button'));
     const btnAddToCartInslider = Array.from($('#mySwiperProductMore a button'));
+
     setArrOnClickAddToCart(btnAddToCart);
     setArrOnClickAddToCart(btnAddToCartInslider);
+
     setOnClickAddToCart($('#add-to-cart'))
 
+    //modal-delete
+    const btnDeleteAddress = Array.from($('.content-dashboard .dashboard-address-item .delete-address'));
+    setArrOnClickDelete(btnDeleteAddress);
+    // cancel-modal
+    $('#cancel-modal').on('click', () => {
+        $('#modal-delete').css('display', 'none');
+    });
 })
 function modesGrid() {
     $('#modes-grid').addClass('active')
@@ -182,6 +196,14 @@ function setOnClickAddToCart(element) {
     })
 }
 
+function setArrOnClickDelete(element) {
+    $(element).on('click', (e) => {
+        e.stopPropagation();
+        $('#modal-delete').css('display', 'flex');
+        return false;
+    })
+}
+
 function addToCart() {
     const html = '<div class="item-cart">'
         + ' <img src="https://o.rada.vn/data/image/2020/11/11/Kho-cuoi-bai-anh-trang-1.jpg"'
@@ -207,16 +229,16 @@ function changeTheme() {
         localStorage.setItem('theme', 'dark');
         $('#btn-theme span ion-icon').attr('name', 'sunny')
     }
-    
+
 }
 
 function setLocationIconTheme() {
     const widthScreen = $(window).width();
     const widthRight = (widthScreen - 1200);
     const right = Math.round(0.3 * widthRight);
-    if(widthScreen > 1360)
+    if (widthScreen > 1360)
         $('#btn-theme').css('right', `${right}px`)
-    else  $('#btn-theme').css('right', '20px')
+    else $('#btn-theme').css('right', '20px')
 }
 
 function formatPrice(price) {

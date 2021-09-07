@@ -238,7 +238,7 @@
                     </div>
                 </div>
                 <div class="col-md-9">
-                    <h2>Sản phẩm yêu thích</h2>
+                    <h2>Thêm địa chỉ</h2>
                 </div>
             </div>
         </div>
@@ -287,144 +287,63 @@
                     <!-- toolbar -->
                     <div class="content-dashboard">
                         <div class="row">
-                            <div class="product-list" id="product-list">
-                                <a href="../views/detail.html">
-                                    <div class="product-item">
-                                        <div class="row">
-                                            <div class="img-product-item">
-                                                <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png"
-                                                    alt="">
-                                            </div>
-                                            <div class="content-product-item">
-                                                <div>
-                                                    <span
-                                                        title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                        Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                        abcnmamcmac</span>
-                                                </div>
-                                                <div>
-                                                    <ion-icon name="star"></ion-icon>
-                                                    <span>
-                                                        84 đánh giá
-                                                    </span>
-                                                </div>
-                                                <div class="price-product">
-                                                    <span>599.000 ₫</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="action-product-item">
-                                                    <button>
-                                                        <span>Thêm vào giỏ hàng </span>
-                                                    </button>
-                                                </div>
-                                            </div>
+                            <form action="" method="post">
+                                <div>
+                                    <label for="name">Họ và tên</label>
+                                    <input type="text" id="name" name="name" placeholder="Nhập họ và tên">
+                                </div>
+                                <div>
+                                    <label for="companyName">Công ty</label>
+                                    <input id="companyName" name="companyName" type="text" placeholder="Nhập công ty">
+                                </div>
+                                <div>
+                                    <label for="phone">Số điện thoại</label>
+                                    <input type="text" id="phone" name="phone" placeholder="Nhập số điện thoại">
+                                </div>
+                                <div>
+                                    <label for="city">Tỉnh/Thành phố</label>
+                                    <select name="city" id="city">
+                                        <option value="">Chọn Tỉnh/Thành phố</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="district">Quận huyện</label>
+                                    <select name="district" id="district">
+                                        <option value="">Chọn Quận huyện</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="ward">Phường xã</label>
+                                    <select name="ward" id="ward">
+                                        <option value="">Chọn Phường xã</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="address">Địa chỉ</label>
+                                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                                </div>
+                                <div>
+                                    <label for="">Loại địa chỉ</label>
+                                    <div class="type-address">
+                                        <div>
+                                            <input type="radio" id="home" name="deliveryAddressType" checked>
+                                            <label for="home">Nhà riêng/Chung cư</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" id="female" name="deliveryAddressType">
+                                            <label for="female">Cơ quan/Công ty</label>
                                         </div>
                                     </div>
-                                </a>
-                                <a href="../views/detail.html">
-                                    <div class="product-item">
-                                        <div class="row">
-                                            <div class="img-product-item">
-                                                <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="content-product-item">
-                                                <div>
-                                                    <span
-                                                        title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                        Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                        abcnmamcmac</span>
-                                                </div>
-                                                <div>
-                                                    <ion-icon name="star"></ion-icon>
-                                                    <span>
-                                                        84 đánh giá
-                                                    </span>
-                                                </div>
-                                                <div class="price-product">
-                                                    <span>599.000 ₫</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="action-product-item">
-                                                    <button>
-                                                        <span>Thêm vào giỏ hàng </span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div>
+                                    <label for="default"></label>
+                                    <div class="address-default">
+                                        <input type="checkbox" id="default" name="default">
+                                        <label for="default">Đặt làm mặt định</label>
                                     </div>
-                                </a>
-                                <a href="../views/detail.html">
-                                    <div class="product-item">
-                                        <div class="row">
-                                            <div class="img-product-item">
-                                                <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="content-product-item">
-                                                <div>
-                                                    <span
-                                                        title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                        Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                        abcnmamcmac</span>
-                                                </div>
-                                                <div>
-                                                    <ion-icon name="star"></ion-icon>
-                                                    <span>
-                                                        84 đánh giá
-                                                    </span>
-                                                </div>
-                                                <div class="price-product">
-                                                    <span>599.000 ₫</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="action-product-item">
-                                                    <button>
-                                                        <span>Thêm vào giỏ hàng </span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="../views/detail.html">
-                                    <div class="product-item">
-                                        <div class="row">
-                                            <div class="img-product-item">
-                                                <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                    alt="">
-                                            </div>
-                                            <div class="content-product-item">
-                                                <div>
-                                                    <span
-                                                        title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                        Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                        abcnmamcmac</span>
-                                                </div>
-                                                <div>
-                                                    <ion-icon name="star"></ion-icon>
-                                                    <span>
-                                                        84 đánh giá
-                                                    </span>
-                                                </div>
-                                                <div class="price-product">
-                                                    <span>599.000 ₫</span>
-                                                </div>
-                                            </div>
-                                            <div class="product-item-bottom">
-                                                <div class="action-product-item">
-                                                    <button>
-                                                        <span>Thêm vào giỏ hàng </span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                                </div>
+                                <button type="submit">Cập nhật</button>
+                            </form>
                         </div>
                     </div>
                 </div>
