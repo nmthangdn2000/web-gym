@@ -26,6 +26,7 @@
     --color-total-price: #f53d2d;
     --color-text-footer: rgb(217, 217, 217);
     --color-a: rgb(49, 49, 207); /* màu chữ 'thay đổi' bê trang giỏ hàng  */
+    --color-a-hover: rgb(255, 255, 255);
     --color-text-in-button: #fff;
     --color-text-notification: #fff;
     --color-hr: #dbdbdb;
@@ -89,6 +90,12 @@ a{
 }
 ul{
     list-style: none;
+}
+.text-align-start{
+    text-align: start;
+}
+.text-align-end{
+    text-align: end;
 }
 .text-align-left{
     text-align: left;
@@ -1974,8 +1981,11 @@ footer .footer-bottom{
 .title-dashboard .col-md-9 h2{
     font-size: var(--font-size-label);
     color: var(--color-h6);
-    font-weight: 600;
+    font-weight: 500;
     margin: 15px 0 0 0;
+}
+.title-dashboard .col-md-9 h2 span{
+    font-weight: 600;
 }
 /* .dashboard .col-md-9{
     border-top: 1px solid var(--color-hr);
@@ -2145,7 +2155,7 @@ footer .footer-bottom{
 .dashboard .content-dashboard .dashboard-address-item .dashboard-address-item-action button:hover{
     background-color: var(--color-hr);
 }
-.dashboard .content-dashboard{
+.dashboard .content-dashboard .table-orders{
     position: relative;
     width: 100%;
     overflow: auto;
@@ -2178,6 +2188,12 @@ footer .footer-bottom{
     padding-bottom: 12px;
     color: var(--color-text);
 }
+.orders-table td > a{
+    color: var(--color-a);
+}
+.orders-table td > a:hover{
+    color: var(--color-a-hover);
+}
 form select{
     border: 1px solid var(--color-hr);
     border-radius: 4px;
@@ -2198,6 +2214,109 @@ form div > div > label{
     min-width: 50px;
     font-size: var(--font-size-text);
     color: var(--color-text);
+}
+/*  detail-orders */
+.content-dashboard .infor-orders{
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content-dashboard .infor-orders .column-infor-orders{
+    flex: 0 0 33%;
+    display: block;
+}
+.content-dashboard .infor-orders .column-infor-orders .title{
+    font-size: var(--font-size-title);
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+.content-dashboard .infor-orders .column-infor-orders > div:nth-child(2){
+    padding: 10px;
+    background-color: var(--background-content);
+    min-height: 120px;
+    height: 120px;
+    color: var(--color-h6);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+.content-dashboard .infor-orders .column-infor-orders > div:nth-child(2) h4{
+    margin-bottom: 5px;
+}
+.content-dashboard .infor-orders .column-infor-orders > div:nth-child(2) span,
+.content-dashboard .infor-orders .column-infor-orders > div:nth-child(2) div{
+    font-size: var(--font-size-text-dash);
+    margin-bottom: 5px;
+}
+.content-dashboard .table-orders-product{
+    width: 100%;
+    overflow: auto;
+    margin-top: 1rem;
+}
+.content-dashboard .table-orders-product table{
+    width: 100%;
+    min-width: 985px;
+    font-size: var(--font-size-text);
+    border-collapse: collapse;
+    color: var(--color-text);
+}
+.content-dashboard .table-orders-product table th{
+    text-align: start;
+}
+.content-dashboard .table-orders-product table th:last-child,
+.content-dashboard .table-orders-product table tr td:last-child{
+    text-align: end;
+}
+.content-dashboard .table-orders-product table thead {
+    border-bottom: 1px solid var(--color-hr);
+}
+.content-dashboard .table-orders-product table th,
+.content-dashboard .table-orders-product table tr td{
+    padding: 10px 5px;
+}
+.content-dashboard .table-orders-product table tr td{
+    vertical-align: top;
+}
+.content-dashboard .table-orders-product table .table-order-td{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.content-dashboard .table-orders-product table .table-order-td img{
+    width: 60px;
+    margin-right: 10px;
+}
+.content-dashboard .table-orders-product table .table-order-td > div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content-dashboard .table-orders-product table .table-order-td > div button {
+    width: 80px;
+    margin-top: 10px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-button);
+    background: var(--primary-bacground-page);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.content-dashboard .table-orders-product table .table-order-td > div button a{
+    color: var(--primary-button);
+}
+.content-dashboard .table-orders-product table .table-order-td > div button:hover{
+    background: var(--primary-button);
+}
+.content-dashboard .table-orders-product table .table-order-td > div button:hover a{
+    color: var(--color-text-in-button);
+}
+.content-dashboard .table-orders-product table tfoot .tfoot-total > td:nth-child(2){
+    font-size: var(--font-size-label);
+    color: var(--color-action-delete);
+}
+.content-dashboard .table-orders-product-footer a{
+    color: var(--color-a);
 }
 /* dashboard */
 @media (min-width: 992px){
@@ -2592,6 +2711,12 @@ form div > div > label{
     }
     .modal .modal-container.w-40{
         width: 84%;
+    }
+    .content-dashboard .infor-order{
+        flex-direction: column;
+    }
+    .content-dashboard .infor-orders .column-infor-orders{
+        flex: 0 0 100%;
     }
 }
 @media (min-width: 991px) and (max-width: 1110px){

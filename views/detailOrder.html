@@ -161,7 +161,7 @@
                                 </a>
                                 <div class="tag-view tag-account">
                                     <!-- này là phần user đã login -->
-                                    <!-- <div class="tag-user-login">
+                                    <div class="tag-user-login">
                                         <a href="../views/dashboard.html">
                                             <div class="tag-user">
                                                 <img src="../public/assets/images/anh.jpg" alt="">
@@ -196,54 +196,10 @@
                                                 <span>Đăng xuất</span>
                                             </div>
                                         </a>
-                                    </div> -->
-                                    <!-- Này là phần chwua login -->
-                                    <div class="tag-user-not-login">
-                                        <a href="../views/signin.html">
-                                            <div class="tag-input tag-input-signin">
-                                                <div>
-                                                    <span>Đăng nhập</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="../views/signup.html">
-                                            <div class="tag-input tag-input-signup">
-                                                <div>
-                                                    <span>Đăng ký</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="tag-input tag-input-fb">
-                                                <div>
-                                                    <div>
-                                                        <img src="../public/assets/icon/facebook-logo.png" alt="">
-                                                    </div>
-                                                    <span>Đăng nhập bằng Facebook</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="tag-input tag-input-gg">
-                                                <div>
-                                                    <div>
-                                                        <img src="../public/assets/icon/google-plus.png" alt="">
-                                                    </div>
-                                                    <span>Đăng nhập bằng Google</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="">
-                                            <div class="tag-input tag-input-zalo">
-                                                <div>
-                                                    <div>
-                                                        <img src="../public/assets/icon/zalo.png" alt="">
-                                                    </div>
-                                                    <span>Đăng nhập bằng zalo</span>
-                                                </div>
-                                            </div>
-                                        </a>
                                     </div>
+                                    <!-- <div>
+
+                                    </div> -->
                                 </div>
                             </li>
                         </ul>
@@ -264,38 +220,32 @@
     <!-- main -->
     <div class="container">
         <!-- Slider main container -->
-        <div class="slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="../public/assets/images/slide1.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../public/assets/images/slide2.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../public/assets/images/slide3.jpg" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="../public/assets/images/slide4.jpg" alt="">
-                    </div>
-                </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-        <!-- Slider main container -->
-        <div class="product">
+        <div class="title-dashboard">
             <div class="row">
                 <div class="col-md-3">
                     <div>
                         <div class="product-header">
                             <div id="list-product">
-                                <ion-icon name="list-outline"></ion-icon>
-                                <span>Danh mục sản phẩm</span>
+                                <div class="tag-user">
+                                    <img src="../public/assets/images/anh.jpg" alt="">
+                                    <div>
+                                        <span>Xin chào</span>
+                                        <span>Nguyễn Minh Thắng</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h2>Chi tiết đơn hàng #013446751 - <span>Giao hàng thành công</span></h2>
+                </div>
+            </div>
+        </div>
+        <div class="product dashboard">
+            <div class="row">
+                <div class="col-md-3">
+                    <div>
                         <div class="product-sidebar">
                             <div class="action-sidebar">
                                 <div class="back-sidebar">
@@ -307,194 +257,177 @@
                                 </div>
                             </div>
                             <ul>
-                                <li><a href="../views/filter.html">Sản phẩm 1</a></li>
+                                <li><a href="../views/dashboard.html">
+                                        <ion-icon name="person-circle-outline"></ion-icon>
+                                        <span>Thông tin tài khoản</span>
+                                    </a></li>
                                 <li>
-                                    <span>Sản phẩm 2
-                                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                                    </span>
-                                    <ul class="sub-menu">
-                                        <li><a href="../views/filter.html">Item 1</a></li>
-                                        <li><a href="../views/filter.html">Item 2</a></li>
-                                    </ul>
+                                    <a href="../views/address.html">
+                                        <ion-icon name="location"></ion-icon>
+                                        <span>Sổ địa chỉ</span>
+                                    </a>
                                 </li>
                                 <li>
-                                    <span>Sản phẩm 2
-                                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                                    </span>
-                                    <ul class="sub-menu">
-                                        <li><a href="../views/filter.html">Item 1</a></li>
-                                        <li><a href="../views/filter.html">Item 2</a></li>
-                                        <li><a href="../views/filter.html">Item 3</a></li>
-                                        <li><a href="../views/filter.html">Item 4</a></li>
-                                    </ul>
+                                    <a href="../views/favorite.html">
+                                        <ion-icon name="heart-circle-outline"></ion-icon>
+                                        <span>Sản phẩm yêu thích</span>
+                                    </a>
                                 </li>
-                                <li><a href="../views/filter.html">Sản phẩm 4</a></li>
+                                <li>
+                                    <a href="../views/histories.html">
+                                        <ion-icon name="newspaper-outline"></ion-icon>
+                                        <span>Lịch sử mua hàng</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-9">
                     <!-- toolbar -->
-                    <div class="toolbar">
+                    <div class="content-dashboard">
                         <div class="row">
-                            <div class="filters">
-                                <label for="cars">Sắp xếp theo </label>
-
-                                <select name="cars" id="cars">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="mercedes">Mercedes</option>
-                                    <option value="audi">Audi</option>
-                                </select>
+                            <div class="infor-orders">
+                                <div class="column-infor-orders orders-address">
+                                    <div class="title">Địa chỉ người nhận</div>
+                                    <div>
+                                        <h4>Nguyễn minh Thắng</h4>
+                                        <span>Địa chỉ: Ngã ba cây thông, thôn Thái Lai, Xã Hòa Nhơn, Huyện Hòa Vang, Đà
+                                            Nẵng, Việt Nam</span>
+                                        <span>Điện thoại: 0905646804</span>
+                                    </div>
+                                </div>
+                                <div class="column-infor-orders order-delivery-type">
+                                    <div class="title">Hình thức vận chuyển</div>
+                                    <div>
+                                        <div>
+                                            <img src="https://salt.tikicdn.com/ts/upload/2a/47/46/0e038f5927f3af308b4500e5b243bcf6.png"
+                                                alt="" width="50px">
+                                            <span>Giao Tiết Kiệm</span>
+                                        </div>
+                                        <span>Giao vào Thứ năm, 17/12</span>
+                                        <span>Miễn phí vận chuyển</span>
+                                    </div>
+                                </div>
+                                <div class="column-infor-orders order-payment">
+                                    <div class="title">Hình thức thanh toán</div>
+                                    <div>
+                                        <span>Thanh toán tiền mặt khi nhận hàng</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="modes">
-                                <span id="modes-grid">
-                                    <ion-icon name="grid-outline"></ion-icon>
-                                </span>
-                                <span id="modes-column">
-                                    <ion-icon name="menu-outline"></ion-icon>
-                                </span>
+                            <div class="table-orders-product">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th width="5%">#</th>
+                                            <th width="45%">Sản phẩm</th>
+                                            <th width="10%">Giá</th>
+                                            <th width="10%">Số lượng</th>
+                                            <th width="15%">Giảm giá</th>
+                                            <th width="15%">Tạm tính</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td width="5%">1</td>
+                                            <td width="40%" class="table-order-td">
+                                                <img src="https://salt.tikicdn.com/cache/200x200/ts/product/6c/d6/da/83bfcc6a3d5829a9f2d938152e9bfe51.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <span>Miếng Lót Chuột Dễ Thương Hình Tròn Họa Tiết ( 20cm ) - Chim
+                                                        Cánh Cụt</span>
+                                                    <button>
+                                                        <a href="../views/detailOrder.html">Mua lại</a>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td width="15%">20.000 ₫</td>
+                                            <td width="10%">100</td>
+                                            <td width="15%">0 ₫</td>
+                                            <td width="15%">2.000.000 ₫</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="5%">1</td>
+                                            <td width="40%" class="table-order-td">
+                                                <img src="https://salt.tikicdn.com/cache/200x200/ts/product/6c/d6/da/83bfcc6a3d5829a9f2d938152e9bfe51.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <span>Miếng Lót Chuột Dễ Thương Hình Tròn Họa Tiết ( 20cm ) - Chim
+                                                        Cánh Cụt</span>
+                                                    <button>
+                                                        <a href="../views/detailOrder.html">Mua lại</a>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td width="15%">20.000 ₫</td>
+                                            <td width="10%">100</td>
+                                            <td width="15%">0 ₫</td>
+                                            <td width="15%">2.000.000 ₫</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="5%">1</td>
+                                            <td width="40%" class="table-order-td">
+                                                <img src="https://salt.tikicdn.com/cache/200x200/ts/product/6c/d6/da/83bfcc6a3d5829a9f2d938152e9bfe51.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <span>Miếng Lót Chuột Dễ Thương Hình Tròn Họa Tiết ( 20cm ) - Chim
+                                                        Cánh Cụt</span>
+                                                    <button>
+                                                        <a href="../views/detailOrder.html">Mua lại</a>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td width="15%">20.000 ₫</td>
+                                            <td width="10%">100</td>
+                                            <td width="15%">0 ₫</td>
+                                            <td width="15%">2.000.000 ₫</td>
+                                        </tr>
+                                        <tr>
+                                            <td width="5%">1</td>
+                                            <td width="40%" class="table-order-td">
+                                                <img src="https://salt.tikicdn.com/cache/200x200/ts/product/6c/d6/da/83bfcc6a3d5829a9f2d938152e9bfe51.jpg"
+                                                    alt="">
+                                                <div>
+                                                    <span>Miếng Lót Chuột Dễ Thương Hình Tròn Họa Tiết ( 20cm ) - Chim
+                                                        Cánh Cụt</span>
+                                                    <button>
+                                                        <a href="../views/detailOrder.html">Mua lại</a>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                            <td width="15%">20.000 ₫</td>
+                                            <td width="10%">100</td>
+                                            <td width="15%">0 ₫</td>
+                                            <td width="15%">2.000.000 ₫</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="4" class="text-align-end">Tạm tính</td>
+                                            <td colspan="2">20.000 ₫</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="text-align-end">Phí vận chuyển</td>
+                                            <td colspan="2">0 ₫</td>
+                                        </tr>
+                                        <tr class="tfoot-total">
+                                            <td colspan="4" class="text-align-end">Tổng cộng</td>
+                                            <td colspan="2">20.000 ₫</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="table-orders-product-footer">
+                                <a href="../views/histories.html">
+                                    << Quay lại đơn hàng của tôi </a>
                             </div>
                         </div>
-                    </div>
-                    <!-- product list-->
-                    <div class="product-list" id="product-list">
-                        <a href="../views/detail.html">
-                            <div class="product-item">
-                                <div class="row">
-                                    <div class="img-product-item">
-                                        <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png"
-                                            alt="">
-                                    </div>
-                                    <div class="content-product-item">
-                                        <div>
-                                            <span
-                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span>
-                                        </div>
-                                        <div>
-                                            <ion-icon name="star"></ion-icon>
-                                            <span>
-                                                84 đánh giá
-                                            </span>
-                                        </div>
-                                        <div class="price-product">
-                                            <span>599.000 ₫</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-item-bottom">
-                                        <div class="action-product-item">
-                                            <button>
-                                                <span>Thêm vào giỏ hàng </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="../views/detail.html">
-                            <div class="product-item">
-                                <div class="row">
-                                    <div class="img-product-item">
-                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="content-product-item">
-                                        <div>
-                                            <span
-                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span>
-                                        </div>
-                                        <div>
-                                            <ion-icon name="star"></ion-icon>
-                                            <span>
-                                                84 đánh giá
-                                            </span>
-                                        </div>
-                                        <div class="price-product">
-                                            <span>599.000 ₫</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-item-bottom">
-                                        <div class="action-product-item">
-                                            <button>
-                                                <span>Thêm vào giỏ hàng </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="../views/detail.html">
-                            <div class="product-item">
-                                <div class="row">
-                                    <div class="img-product-item">
-                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="content-product-item">
-                                        <div>
-                                            <span
-                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span>
-                                        </div>
-                                        <div>
-                                            <ion-icon name="star"></ion-icon>
-                                            <span>
-                                                84 đánh giá
-                                            </span>
-                                        </div>
-                                        <div class="price-product">
-                                            <span>599.000 ₫</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-item-bottom">
-                                        <div class="action-product-item">
-                                            <button>
-                                                <span>Thêm vào giỏ hàng </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="../views/detail.html">
-                            <div class="product-item">
-                                <div class="row">
-                                    <div class="img-product-item">
-                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                            alt="">
-                                    </div>
-                                    <div class="content-product-item">
-                                        <div>
-                                            <span
-                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span>
-                                        </div>
-                                        <div>
-                                            <ion-icon name="star"></ion-icon>
-                                            <span>
-                                                84 đánh giá
-                                            </span>
-                                        </div>
-                                        <div class="price-product">
-                                            <span>599.000 ₫</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-item-bottom">
-                                        <div class="action-product-item">
-                                            <button>
-                                                <span>Thêm vào giỏ hàng </span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- main -->
 
@@ -579,29 +512,8 @@
     <script src="../public/js/jquery-3.6.0.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="../public/lib/swiper/js/swiper-bundle.js"></script>
-    <script src="../public/lib/swiper/js/swiper-bundle.min.js"></script>
     <script src="../public/js/index.js"></script>
-    <script>
-        $(document).ready(() => {
-            const swiper = new Swiper('.swiper-container', {
-                direction: 'horizontal',
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false
-                },
-                speed: 800,
-            })
-        })
-    </script>
+    <script src="../public/js/dashboard.js"></script>
 </body>
 
 </html>

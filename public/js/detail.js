@@ -36,20 +36,24 @@ $(document).ready(() => {
         tint: true,
         tintColour: '#FFF',
         tintOpacity: 0.5,
+        scrollZoom: true,
         zoomWindowFadeIn: 300,
         zoomWindowFadeOut: 300,
         lensFadeIn: 300,
-        lensFadeOut: 300
+        lensFadeOut: 300,
+        cursor: "crosshair",
     });
     swiper2.on('transitionEnd', function () {
         $('.mySwiper2 .swiper-slide-active img').elevateZoom({
             tint: true,
             tintColour: '#FFF',
             tintOpacity: 0.5,
-            zoomWindowFadeIn: 200,
-            zoomWindowFadeOut: 200,
-            lensFadeIn: 200,
-            lensFadeOut: 200
+            scrollZoom: true,
+            zoomWindowFadeIn: 300,
+            zoomWindowFadeOut: 300,
+            lensFadeIn: 300,
+            lensFadeOut: 300,
+            cursor: "crosshair",
         });
     });
     const swiperProductMore = new Swiper(".mySwiperProductMore", {
