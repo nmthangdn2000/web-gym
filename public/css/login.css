@@ -1,0 +1,107 @@
+form {
+  background-color: var(--background-content);
+  width: 400px;
+  margin: auto;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form h1 {
+  color: var(--color-h6);
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+form > div > label {
+  margin: 20px 0 5px 0;
+}
+form > div > label > span {
+  font-weight: 700px;
+  color: var(--color-text);
+  font-size: 15px;
+}
+form > div > div {
+  position: relative;
+  width: 100%;
+}
+form > div > div > input {
+  width: 100%;
+  margin: 5px 0;
+  padding: 13px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form > div > div > ion-icon {
+  position: absolute;
+  right: 15px;
+  transform: translate(0, -50%);
+  top: 50%;
+  font-size: 20px;
+  color: #7a797e;
+  cursor: pointer;
+}
+form > div > div > ion-icon:hover {
+  color: black;
+}
+
+form > button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary-button);
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  color: var(--color-text-in-button);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+form > button:hover {
+  background-color: var(--primary-button-hover);
+}
+
+.forgot-password {
+  text-align: end;
+}
+.forgot-password span {
+  font-size: 11px;
+  color: var(--color-a);
+  cursor: pointer;
+}
+.login-or > div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.login-or > div:nth-child(1) > div:nth-child(2) {
+  min-width: 50px;
+  font-size: 11px;
+  color: var(--color-text);
+  text-transform: uppercase;
+  text-align: center;
+}
+.login-or > div:nth-child(1) > div:nth-child(1),
+.login-or > div:nth-child(1) > div:nth-child(3) {
+  width: 100%;
+  border-top: 1px solid var(--color-hr);
+}
+.login-footer {
+  margin: 20px 0;
+  flex-direction: row;
+  justify-content: center;
+  color: var(--color-text);
+  font-size: 11px;
+}
+.login-footer span:nth-child(2) {
+  color: var(--color-action-delete);
+  font-size: 12px;
+  margin-left: 5px;
+  cursor: pointer;
+}
