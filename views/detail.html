@@ -1,995 +1,1006 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../public/lib/swiper/css/swiper-bundle.css" />
     <link rel="stylesheet" href="../public/lib/swiper/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="../public/lib/number-spinner/css/jquery.nice-number.css">
+    <link rel="stylesheet" href="../public/lib/number-spinner/css/jquery.nice-number.css" />
 
-    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/css/index.css" />
 
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0"
-        nonce="Y4sQfd6P"></script>
-</head>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0"
+      nonce="Y4sQfd6P"
+    ></script>
+  </head>
 
-<body class="light-theme">
+  <body class="light-theme">
     <div id="loading-page">
-        <div>
-            <span>Loading ...</span>
-        </div>
+      <div>
+        <span>Loading ...</span>
+      </div>
     </div>
     <!-- header -->
     <header>
-        <div class="header">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="logo">
-                        <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" alt="">
-                    </div>
+      <div class="header">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="logo">
+              <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <nav class="nav-header">
+              <div class="action-sidebar">
+                <h6></h6>
+                <div class="close-sidebar">
+                  <ion-icon name="close-outline"></ion-icon>
                 </div>
-                <div class="col-md-6">
-                    <nav class="nav-header">
-                        <div class="action-sidebar">
-                            <h6></h6>
-                            <div class="close-sidebar">
-                                <ion-icon name="close-outline"></ion-icon>
-                            </div>
+              </div>
+              <ul>
+                <li><a href="../views/index.html" class="active">trang chủ</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Thuốc trừ sâu</a></li>
+              </ul>
+            </nav>
+            <div class="search-box">
+              <input type="text" placeholder="Tìm kiếm tại đây ..." />
+              <button>
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </div>
+            <div id="cover"></div>
+          </div>
+          <div class="col-md-3">
+            <div class="header-user-shortcut text-align-right">
+              <ul class="icon-responsive">
+                <li>
+                  <a id="btn-open-search-box">
+                    <ion-icon name="search-outline"></ion-icon>
+                  </a>
+                </li>
+                <li id="btn-theme">
+                  <span>
+                    <ion-icon name="sunny"></ion-icon>
+                  </span>
+                </li>
+                <li>
+                  <a class="btn-toggler" id="btn-toggler">
+                    <ion-icon name="menu-outline"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="../views/cart.html">
+                    <ion-icon name="cart-outline"></ion-icon>
+                  </a>
+                  <div class="tag-view tag-cart">
+                    <h6>Sản phẩm mới thêm</h6>
+                    <div class="list-item-cart" id="list-item-cart">
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
                         </div>
-                        <ul>
-                            <li><a href="../views/index.html" class="active">trang chủ</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="">Thuốc trừ sâu</a></li>
-                        </ul>
-                    </nav>
-                    <div class="search-box">
-                        <input type="text" placeholder="Tìm kiếm tại đây ...">
-                        <button>
-                            <ion-icon name="search-outline"></ion-icon>
-                        </button>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>10</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
                     </div>
-                    <div id="cover"></div>
-                </div>
-                <div class="col-md-3">
-                    <div class="header-user-shortcut text-align-right">
-                        <ul class="icon-responsive">
-                            <li>
-                                <a id="btn-open-search-box">
-                                    <ion-icon name="search-outline"></ion-icon>
-                                </a>
-                            </li>
-                            <li id="btn-theme">
-                                <span>
-                                    <ion-icon name="sunny"></ion-icon>
-                                </span>
-                            </li>
-                            <li>
-                                <a class="btn-toggler" id="btn-toggler">
-                                    <ion-icon name="menu-outline"></ion-icon>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <ion-icon name="heart-outline"></ion-icon>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="../views/cart.html">
-                                    <ion-icon name="cart-outline"></ion-icon>
-                                </a>
-                                <div class="tag-view tag-cart">
-                                    <h6>Sản phẩm mới thêm</h6>
-                                    <div class="list-item-cart" id="list-item-cart">
-                                        <div class="item-cart">
-                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
-                                                alt="">
-                                            <div class="infor-item-cart">
-                                                <span>Thuốc trừ sâu</span>
-                                                <div><span>1</span></div>
-                                            </div>
-                                            <div class="price-item-cart">599.000 VND</div>
-                                        </div>
-                                        <div class="item-cart">
-                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
-                                                alt="">
-                                            <div class="infor-item-cart">
-                                                <span>Thuốc trừ sâu</span>
-                                                <div><span>10</span></div>
-                                            </div>
-                                            <div class="price-item-cart">599.000 VND</div>
-                                        </div>
-                                        <div class="item-cart">
-                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
-                                                alt="">
-                                            <div class="infor-item-cart">
-                                                <span>Thuốc trừ sâu</span>
-                                                <div><span>1</span></div>
-                                            </div>
-                                            <div class="price-item-cart">599.000 VND</div>
-                                        </div>
-                                        <div class="item-cart">
-                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
-                                                alt="">
-                                            <div class="infor-item-cart">
-                                                <span>Thuốc trừ sâu</span>
-                                                <div><span>1</span></div>
-                                            </div>
-                                            <div class="price-item-cart">599.000 VND</div>
-                                        </div>
-                                        <div class="item-cart">
-                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
-                                                alt="">
-                                            <div class="infor-item-cart">
-                                                <span>Thuốc trừ sâu</span>
-                                                <div><span>1</span></div>
-                                            </div>
-                                            <div class="price-item-cart">599.000 VND</div>
-                                        </div>
-                                        <div class="item-cart">
-                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
-                                                alt="">
-                                            <div class="infor-item-cart">
-                                                <span>Thuốc trừ sâu</span>
-                                                <div><span>1</span></div>
-                                            </div>
-                                            <div class="price-item-cart">599.000 VND</div>
-                                        </div>
-                                        <div class="item-cart">
-                                            <img src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
-                                                alt="">
-                                            <div class="infor-item-cart">
-                                                <span>Thuốc trừ sâu</span>
-                                                <div><span>1</span></div>
-                                            </div>
-                                            <div class="price-item-cart">599.000 VND</div>
-                                        </div>
-                                    </div>
-                                    <div class="tag-cart-bottom">
-                                        <div class="cart-total">
-                                            <h6>Tổng tiền</h6>
-                                            <h4>599.000 VND</h4>
-                                        </div>
-                                        <div><a href="../views/cart.html"><button class="btn-cart">Xem giỏ
-                                                    hàng</button></a></div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <ion-icon name="person-outline"></ion-icon>
-                                </a>
-                                <div class="tag-view tag-account">
-                                    <!-- này là phần user đã login -->
-                                    <div class="tag-user-login">
-                                        <a href="../views/dashboard.html">
-                                            <div class="tag-user">
-                                                <img src="../public/assets/images/anh.jpg" alt="">
-                                                <div>
-                                                    <span>Xin chào</span>
-                                                    <span>Nguyễn Minh Thắng</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <div class="hr"></div>
-                                        <a href="#">
-                                            <div class="tag-infor-user">
-                                                <ion-icon name="person-circle-outline"></ion-icon>
-                                                <span>Thông tin tài khoản</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="tag-address">
-                                                <ion-icon name="location"></ion-icon>
-                                                <span>Sổ địa chỉ</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="tag-histories">
-                                                <ion-icon name="newspaper-outline"></ion-icon>
-                                                <span>Lịch sử mua hàng</span>
-                                            </div>
-                                        </a>
-                                        <a href="#">
-                                            <div class="tag-log-out">
-                                                <ion-icon name="log-out-outline"></ion-icon>
-                                                <span>Đăng xuất</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <!-- <div>
+                    <div class="tag-cart-bottom">
+                      <div class="cart-total">
+                        <h6>Tổng tiền</h6>
+                        <h4>599.000 VND</h4>
+                      </div>
+                      <div>
+                        <a href="../views/cart.html"><button class="btn-cart">Xem giỏ hàng</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="">
+                    <ion-icon name="person-outline"></ion-icon>
+                  </a>
+                  <div class="tag-view tag-account">
+                    <!-- này là phần user đã login -->
+                    <div class="tag-user-login">
+                      <a href="../views/dashboard.html">
+                        <div class="tag-user">
+                          <img src="../public/assets/images/anh.jpg" alt="" />
+                          <div>
+                            <span>Xin chào</span>
+                            <span>Nguyễn Minh Thắng</span>
+                          </div>
+                        </div>
+                      </a>
+                      <div class="hr"></div>
+                      <a href="#">
+                        <div class="tag-infor-user">
+                          <ion-icon name="person-circle-outline"></ion-icon>
+                          <span>Thông tin tài khoản</span>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="tag-address">
+                          <ion-icon name="location"></ion-icon>
+                          <span>Sổ địa chỉ</span>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="tag-histories">
+                          <ion-icon name="newspaper-outline"></ion-icon>
+                          <span>Lịch sử mua hàng</span>
+                        </div>
+                      </a>
+                      <a href="#">
+                        <div class="tag-log-out">
+                          <ion-icon name="log-out-outline"></ion-icon>
+                          <span>Đăng xuất</span>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- <div>
 
                                     </div> -->
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                  </div>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
     </header>
     <!-- header -->
     <div id="cover"></div>
 
     <!-- modal success -->
     <div class="modal-success" id="modal-success">
-        <div class="modal-success-overlay"></div>
-        <div class="modal-container">
-            <img src="../public/assets/images/accept_icon.png" alt="">
-            <span>Thêm vào giỏ hàng thành công!</span>
-            <a href="../views/cart.html"><button>Đến giỏ hàng bây giờ</button></a>
-        </div>
+      <div class="modal-success-overlay"></div>
+      <div class="modal-container">
+        <img src="../public/assets/images/accept_icon.png" alt="" />
+        <span>Thêm vào giỏ hàng thành công!</span>
+        <a href="../views/cart.html"><button>Đến giỏ hàng bây giờ</button></a>
+      </div>
     </div>
     <!-- modal success -->
     <!-- main -->
     <div class="container">
-        <div class="product">
-            <div class="row">
-                <div class="col-md-3">
-                    <div>
-                        <div class="product-header">
-                            <div id="list-product">
-                                <ion-icon name="list-outline"></ion-icon>
-                                <span>Danh mục sản phẩm</span>
-                            </div>
-                        </div>
-                        <div class="product-sidebar">
-                            <div class="action-sidebar">
-                                <div class="back-sidebar">
-                                    <ion-icon name="chevron-back-outline"></ion-icon>
-                                </div>
-                                <h6></h6>
-                                <div class="close-sidebar">
-                                    <ion-icon name="close-outline"></ion-icon>
-                                </div>
-                            </div>
-                            <ul>
-                                <li><a href="">Sản phẩm 1</a></li>
-                                <li>
-                                    <span>Sản phẩm 2
-                                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                                    </span>
-                                    <ul class="sub-menu">
-                                        <li><a href="">Item 1</a></li>
-                                        <li><a href="">Item 2</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span>Sản phẩm 2
-                                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                                    </span>
-                                    <ul class="sub-menu">
-                                        <li><a href="">Item 1</a></li>
-                                        <li><a href="">Item 2</a></li>
-                                        <li><a href="">Item 3</a></li>
-                                        <li><a href="">Item 4</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">Sản phẩm 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
+      <div class="product">
+        <div class="row">
+          <div class="col-md-3">
+            <div>
+              <div class="product-header">
+                <div id="list-product">
+                  <ion-icon name="list-outline"></ion-icon>
+                  <span>Danh mục sản phẩm</span>
                 </div>
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="product-detail">
-                            <div class="col-md-6">
-                                <div class="product-image">
-                                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-                                        class="swiper-container mySwiper2">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png"
-                                                    data-zoom-image="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div thumbsSlider="" class="swiper-container mySwiper">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img
-                                                    src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button">
-                                        <div class="swiper-button-next"></div>
-                                        <div class="swiper-button-prev"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="product-infor">
-                                    <div>
-                                        <div class="product-title">
-                                            <span>Thuốc trừ sâu</span>
-                                        </div>
-                                        <div class="product-action">
-                                            <div class="action-like">
-                                                <ion-icon name="heart-outline"></ion-icon>
-                                            </div>
-                                            <div class="action-share">
-                                                <ion-icon name="share-social-outline"></ion-icon>
-                                                <ul>
-                                                    <li>
-                                                        <ion-icon name="logo-facebook"></ion-icon>
-                                                    </li>
-                                                    <li>
-                                                        <ion-icon name="logo-twitter"></ion-icon>
-                                                    </li>
-                                                    <li>
-                                                        <ion-icon name="logo-linkedin"></ion-icon>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="product-price">
-                                            <span class="price-label" data-price="599000" id="product-price">599.000
-                                                ₫</span>
-                                            <span class="price">599.000 ₫</span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="description">
-                                            <span>
-                                                Whey protein tinh khiết hấp thu nhanh - Hỗ trợ phục hồi cơ bắp sau tập
-                                                luyện
-                                                hiệu quả - Nâng cao cường độ tập luyện - Hương vị thơm ngon hấp dẫn dễ
-                                                dàng
-                                                pha
-                                                trộn
-                                            </span>
-                                        </div>
-                                        <div class="product-amount">
-                                            <label for="product-amount">Số lượng: </label>
-                                            <input type="number" name="amount" id="product-amount" value="1" min="1">
-                                        </div>
-                                        <div class="product-flavor">
-                                            <label for="product-flavor">Hương vị: </label>
-                                            <select name="flavor" id="product-flavor">
-                                                <option value="volvo">Volvo</option>
-                                                <option value="saab">Saab</option>
-                                                <option value="mercedes">Mercedes</option>
-                                                <option value="audi">Audi</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="add-to-cart">
-                                        <span id="add-to-cart">
-                                            Thêm vào giỏ hàng
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="product-infor-detail">
-                            <input type="radio" name="slider" id="home" checked>
-                            <input type="radio" name="slider" id="rated">
-                            <input type="radio" name="slider" id="product-accompanying">
-                            <nav>
-                                <label for="home" class="home">Chi tiết</label>
-                                <label for="rated" class="rated">Đánh giá</label>
-                                <label for="product-accompanying" class="product-accompanying">Sản phẩm kèm theo</label>
-                            </nav>
-                            <section>
-                                <div class="content content-1">
-                                    Lean Body for her - đứa con cưng đến từ thương hiệu Labrada. Xét về giá trị dinh
-                                    dưỡng mỗi gói Lean Body for her đều mang đến một bữa ăn giá trị giúp bạn dễ dàng có
-                                    được nguồn dinh dưỡng tuyệt vời. Lean Body for hers với thành phần dinh dưỡng cân
-                                    bằng không chỉ giúp bạn có được một vóc dáng hoàn hảo còn giúp cơ thể bạn hoạt động
-                                    tốt hơn, khỏe mạnh hơn. Lean Body For Her chính là sự phối hợp cân bằng giữa protein
-                                    chất lượng cao, carbs và chất xơ cùng hàm lượng lí tưởng các vitamin khoáng chất như
-                                    canxi, axit folic và sắt.
-                                </div>
-                                <div class="content content-2">
-                                    <div class="fb-comments" data-href="http://127.0.0.1:5500/views/detail.html"
-                                        data-width="100%" data-numposts="5"></div>
-                                </div>
-                                <div class="content content-3">
-                                    <div class="toolbar">
-                                        <div class="row">
-                                            <div class="filters">
-                                                <label for="cars">Sắp xếp theo </label>
-
-                                                <select name="cars" id="cars">
-                                                    <option value="volvo">Volvo</option>
-                                                    <option value="saab">Saab</option>
-                                                    <option value="mercedes">Mercedes</option>
-                                                    <option value="audi">Audi</option>
-                                                </select>
-                                            </div>
-                                            <div class="modes">
-                                                <span id="modes-grid">
-                                                    <ion-icon name="grid-outline"></ion-icon>
-                                                </span>
-                                                <span id="modes-column">
-                                                    <ion-icon name="menu-outline"></ion-icon>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-list" id="product-list">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="product-more">
-                            <div>
-                                <hr>
-                                <h6>Sản phẩm tương tự</h6>
-                                <hr>
-                            </div>
-                            <div class="swiper-container mySwiperProductMore" id="mySwiperProductMore">
-                                <div class="swiper-wrapper ">
-                                    <div class="swiper-slide">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="../views/detail.html">
-                                            <div class="product-item">
-                                                <div class="row">
-                                                    <div class="img-product-item">
-                                                        <img src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
-                                                            alt="">
-                                                    </div>
-                                                    <div class="content-product-item">
-                                                        <div>
-                                                            <span
-                                                                title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac">Nutrex
-                                                                Vitadapt - Vitamin khoáng chất thể thao đa năng
-                                                                abcnmamcmac</span>
-                                                        </div>
-                                                        <div>
-                                                            <ion-icon name="star"></ion-icon>
-                                                            <span>
-                                                                84 đánh giá
-                                                            </span>
-                                                        </div>
-                                                        <div class="price-product">
-                                                            <span>599.000 ₫</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-item-bottom">
-                                                        <div class="action-product-item">
-                                                            <button>
-                                                                <span>Thêm vào giỏ hàng </span>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div class="product-more-button-prev">
-                                        <ion-icon name="chevron-back-outline"></ion-icon>
-                                    </div>
-                                    <div class="product-more-button-next">
-                                        <ion-icon name="chevron-forward-outline"></ion-icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="product-sidebar">
+                <div class="action-sidebar">
+                  <div class="back-sidebar">
+                    <ion-icon name="chevron-back-outline"></ion-icon>
+                  </div>
+                  <h6></h6>
+                  <div class="close-sidebar">
+                    <ion-icon name="close-outline"></ion-icon>
+                  </div>
                 </div>
+                <ul>
+                  <li><a href="">Sản phẩm 1</a></li>
+                  <li>
+                    <span
+                      >Sản phẩm 2
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </span>
+                    <ul class="sub-menu">
+                      <li><a href="">Item 1</a></li>
+                      <li><a href="">Item 2</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span
+                      >Sản phẩm 2
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </span>
+                    <ul class="sub-menu">
+                      <li><a href="">Item 1</a></li>
+                      <li><a href="">Item 2</a></li>
+                      <li><a href="">Item 3</a></li>
+                      <li><a href="">Item 4</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="">Sản phẩm 4</a></li>
+                </ul>
+              </div>
             </div>
+          </div>
+          <div class="col-md-9">
+            <div class="row">
+              <div class="product-detail">
+                <div class="col-md-6">
+                  <div class="product-image">
+                    <div
+                      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                      class="swiper-container mySwiper2"
+                    >
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img
+                            src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png"
+                            data-zoom-image="../public/assets/images/raw_fushion_vanilla-removebg-preview.png"
+                          />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div thumbsSlider="" class="swiper-container mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button">
+                      <div class="swiper-button-next"></div>
+                      <div class="swiper-button-prev"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <form action="" method="post">
+                    <div class="product-infor">
+                      <div>
+                        <div class="product-title">
+                          <span>Thuốc trừ sâu</span>
+                        </div>
+                        <div class="product-action">
+                          <div class="action-like">
+                            <ion-icon name="heart-outline"></ion-icon>
+                          </div>
+                          <div class="action-share">
+                            <ion-icon name="share-social-outline"></ion-icon>
+                            <ul>
+                              <li>
+                                <ion-icon name="logo-facebook"></ion-icon>
+                              </li>
+                              <li>
+                                <ion-icon name="logo-twitter"></ion-icon>
+                              </li>
+                              <li>
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="product-price">
+                          <span class="price-label" data-price="599000" id="product-price">599.000 ₫</span>
+                          <span class="price">599.000 ₫</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="description">
+                          <span>
+                            Whey protein tinh khiết hấp thu nhanh - Hỗ trợ phục hồi cơ bắp sau tập luyện hiệu quả - Nâng
+                            cao cường độ tập luyện - Hương vị thơm ngon hấp dẫn dễ dàng pha trộn
+                          </span>
+                        </div>
+                        <div class="product-amount">
+                          <label for="product-amount">Số lượng: </label>
+                          <input type="number" name="amount" id="product-amount" value="1" min="1" />
+                        </div>
+                        <div class="product-flavor">
+                          <label for="product-flavor">Hương vị: </label>
+                          <select name="flavor" id="product-flavor">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="add-to-cart">
+                        <button id="add-to-cart"><span>Thêm vào giỏ hàng</span></button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="product-infor-detail">
+                <input type="radio" name="slider" id="home" checked />
+                <input type="radio" name="slider" id="rated" />
+                <input type="radio" name="slider" id="product-accompanying" />
+                <nav>
+                  <label for="home" class="home">Chi tiết</label>
+                  <label for="rated" class="rated">Đánh giá</label>
+                  <label for="product-accompanying" class="product-accompanying">Sản phẩm kèm theo</label>
+                </nav>
+                <section>
+                  <div class="content content-1">
+                    Lean Body for her - đứa con cưng đến từ thương hiệu Labrada. Xét về giá trị dinh dưỡng mỗi gói Lean
+                    Body for her đều mang đến một bữa ăn giá trị giúp bạn dễ dàng có được nguồn dinh dưỡng tuyệt vời.
+                    Lean Body for hers với thành phần dinh dưỡng cân bằng không chỉ giúp bạn có được một vóc dáng hoàn
+                    hảo còn giúp cơ thể bạn hoạt động tốt hơn, khỏe mạnh hơn. Lean Body For Her chính là sự phối hợp cân
+                    bằng giữa protein chất lượng cao, carbs và chất xơ cùng hàm lượng lí tưởng các vitamin khoáng chất
+                    như canxi, axit folic và sắt.
+                  </div>
+                  <div class="content content-2">
+                    <div
+                      class="fb-comments"
+                      data-href="http://127.0.0.1:5500/views/detail.html"
+                      data-width="100%"
+                      data-numposts="5"
+                    ></div>
+                  </div>
+                  <div class="content content-3">
+                    <div class="toolbar">
+                      <div class="row">
+                        <div class="filters">
+                          <label for="cars">Sắp xếp theo </label>
+
+                          <select name="cars" id="cars">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                          </select>
+                        </div>
+                        <div class="modes">
+                          <span id="modes-grid">
+                            <ion-icon name="grid-outline"></ion-icon>
+                          </span>
+                          <span id="modes-column">
+                            <ion-icon name="menu-outline"></ion-icon>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product-list" id="product-list">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" alt="" />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="row">
+              <div class="product-more">
+                <div>
+                  <hr />
+                  <h6>Sản phẩm tương tự</h6>
+                  <hr />
+                </div>
+                <div class="swiper-container mySwiperProductMore" id="mySwiperProductMore">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="../views/detail.html">
+                        <div class="product-item">
+                          <div class="row">
+                            <div class="img-product-item">
+                              <img
+                                src="https://cdn.nguyenkimmall.com/images/detailed/555/may-anh-cho-nguoi-moi.jpg"
+                                alt=""
+                              />
+                            </div>
+                            <div class="content-product-item">
+                              <div>
+                                <span title="Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac"
+                                  >Nutrex Vitadapt - Vitamin khoáng chất thể thao đa năng abcnmamcmac</span
+                                >
+                              </div>
+                              <div>
+                                <ion-icon name="star"></ion-icon>
+                                <span> 84 đánh giá </span>
+                              </div>
+                              <div class="price-product">
+                                <span>599.000 ₫</span>
+                              </div>
+                            </div>
+                            <div class="product-item-bottom">
+                              <div class="action-product-item">
+                                <button>
+                                  <span>Thêm vào giỏ hàng </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="product-more-button-prev">
+                      <ion-icon name="chevron-back-outline"></ion-icon>
+                    </div>
+                    <div class="product-more-button-next">
+                      <ion-icon name="chevron-forward-outline"></ion-icon>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- main -->
 
     <!-- footer -->
     <footer>
-        <div class="row">
-            <div class="col-md-4 infor">
-                <h6>Thông tin liên hệ</h6>
-                <ul>
-                    <li>
-                        <div>
-                            <ion-icon name="home"></ion-icon>
-                            <span>Hòa Nhơn - Hòa Vang - TP. Đà Nẵng</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <ion-icon name="mail-unread"></ion-icon>
-                            <span>shop@gmail.com</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <ion-icon name="call"></ion-icon>
-                            <span>09056123456</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <ion-icon name="time"></ion-icon>
-                            <span>Làm việc từ 7h30 - 17h30</span>
-                        </div>
-                    </li>
-                </ul>
-                <!-- <div class="boss">
+      <div class="row">
+        <div class="col-md-4 infor">
+          <h6>Thông tin liên hệ</h6>
+          <ul>
+            <li>
+              <div>
+                <ion-icon name="home"></ion-icon>
+                <span>Hòa Nhơn - Hòa Vang - TP. Đà Nẵng</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <ion-icon name="mail-unread"></ion-icon>
+                <span>shop@gmail.com</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <ion-icon name="call"></ion-icon>
+                <span>09056123456</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <ion-icon name="time"></ion-icon>
+                <span>Làm việc từ 7h30 - 17h30</span>
+              </div>
+            </li>
+          </ul>
+          <!-- <div class="boss">
                     <div>Chịu trách nhiệm Website: Nguyễn Văn A</div>
                     <div>Email: nva@gmail.com</div>
                 </div> -->
-                <div class="infor-social">
-                    <h6>Kết nối với chúng tôi</h6>
-                    <div class="list-icon-social">
-                        <img src="../public/assets/icon/facebook.png" alt="facebook">
-                        <img src="../public/assets/icon/instagram.png" alt="instagram">
-                        <img src="../public/assets/icon/youtube.png" alt="youtobe">
-                    </div>
-                </div>
+          <div class="infor-social">
+            <h6>Kết nối với chúng tôi</h6>
+            <div class="list-icon-social">
+              <img src="../public/assets/icon/facebook.png" alt="facebook" />
+              <img src="../public/assets/icon/instagram.png" alt="instagram" />
+              <img src="../public/assets/icon/youtube.png" alt="youtobe" />
             </div>
-            <div class="col-md-4 social">
-                <div class="bank">
-                    <h6>Chúng tôi chấp nhận</h6>
-                    <div class="list-bank">
-                        <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/15282732253085529991.png" alt="">
-                        <img src="http://img.ltwebstatic.com/images3_pi/2021/03/09/161528368123dd7a35ad8708b0dfc74b3630526891.png"
-                            alt="">
-                        <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/15282732803587566708.png" alt="">
-                        <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/15282732983375743706.png" alt="">
-                        <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/1528273036537082707.png" alt="">
-                        <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/1528273241354964734.png" alt="">
-                        <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/15282733431754785346.png" alt="">
-                    </div>
-                    <div class="receive-news">
-                        <h6>Đăng ký nhận tin</h6>
-                        <div class="input-email-footer">
-                            <input type="text" placeholder="Nhập địa chỉ email của bạn ...">
-                            <button><span>Gửi</span></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 map">
-                <h6>Trụ sở</h6>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380.5061683935988!2d108.14387341205129!3d15.999881657439415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421b4f2148f3cd%3A0xb5f873fd0ae8ec6b!2sDreams%20Mart%20-%20Dreams%20Mart!5e0!3m2!1sen!2s!4v1627404314508!5m2!1sen!2s"
-                    style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <span>©2009-2021 SHOP bảo lưu tất cả các quyền</span>
+        <div class="col-md-4 social">
+          <div class="bank">
+            <h6>Chúng tôi chấp nhận</h6>
+            <div class="list-bank">
+              <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/15282732253085529991.png" alt="" />
+              <img
+                src="http://img.ltwebstatic.com/images3_pi/2021/03/09/161528368123dd7a35ad8708b0dfc74b3630526891.png"
+                alt=""
+              />
+              <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/15282732803587566708.png" alt="" />
+              <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/15282732983375743706.png" alt="" />
+              <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/1528273036537082707.png" alt="" />
+              <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/1528273241354964734.png" alt="" />
+              <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/15282733431754785346.png" alt="" />
+            </div>
+            <div class="receive-news">
+              <h6>Đăng ký nhận tin</h6>
+              <div class="input-email-footer">
+                <input type="text" placeholder="Nhập địa chỉ email của bạn ..." />
+                <button><span>Gửi</span></button>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="col-md-4 map">
+          <h6>Trụ sở</h6>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380.5061683935988!2d108.14387341205129!3d15.999881657439415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421b4f2148f3cd%3A0xb5f873fd0ae8ec6b!2sDreams%20Mart%20-%20Dreams%20Mart!5e0!3m2!1sen!2s!4v1627404314508!5m2!1sen!2s"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>©2009-2021 SHOP bảo lưu tất cả các quyền</span>
+      </div>
     </footer>
     <!-- footer -->
     <script src="../public/js/jquery-3.6.0.js"></script>
@@ -1001,6 +1012,5 @@
     <script src="../public/lib/exzoom/js/jquery.elevateZoom-3.0.8.min.js"></script>
     <script src="../public/js/index.js"></script>
     <script src="../public/js/detail.js"></script>
-</body>
-
+  </body>
 </html>
