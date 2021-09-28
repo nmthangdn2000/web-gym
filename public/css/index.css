@@ -123,6 +123,14 @@ select:focus {
   width: 100%;
   padding-right: 20px;
 }
+.col-md-5 {
+  flex: 0 0 40%;
+  width: 100%;
+}
+.col-md-7 {
+  flex: 0 0 60%;
+  width: 100%;
+}
 .col-md-9 {
   flex: 0 0 77%;
   width: 100%;
@@ -1430,9 +1438,9 @@ h1 {
 .product-amount .nice-number button:hover {
   background: rgb(190, 190, 190);
 }
-.product-flavor select {
+.product-flavor > select {
   min-width: 150px;
-  max-width: 100%;
+  max-width: 150px;
   padding: 8px;
   border-radius: 3px;
   border: 1px solid rgb(0, 0, 0, 0.1);
@@ -1864,7 +1872,7 @@ footer .footer-bottom {
 .my-cart .my-cart-list .my-cart-list-item .product-infor h6:hover {
   color: rgb(0, 127, 240);
 }
-.my-cart .my-cart-list .my-cart-list-item .product-flavor select {
+.my-cart .my-cart-list .my-cart-list-item .product-flavor > select {
   font-size: var(--font-size-title);
   white-space: nowrap;
   width: 90px;
@@ -2765,7 +2773,7 @@ form div > div > label {
   .my-cart .my-cart-list .my-cart-list-item > div:nth-child(2) {
     text-align: left;
   }
-  .product-flavor select {
+  .product-flavor > select {
     padding: 5px;
   }
   .my-cart .header-cart > div {

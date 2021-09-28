@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../public/css/index.css" />
+    <style>
+      form > div > input,
+      form select,
+      form textarea {
+        width: 100% !important;
+        margin-right: 0;
+      }
+      .content-dashboard {
+        max-width: 600px;
+        margin: 0 auto 20px auto;
+      }
+      form {
+        margin: 20px 0;
+      }
+      form button {
+        margin: auto;
+      }
+      .content-dashboard form div > button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: var(--primary-button);
+        color: var(--color-text-in-button);
+        cursor: pointer;
+      }
+      @media (max-width: 992px) {
+        form {
+          flex-direction: column;
+          padding: 10px 20px;
+        }
+        form > div > input,
+        form select,
+        form textarea {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="light-theme">
+    <div id="loading-page">
+      <div>
+        <span>Loading ...</span>
+      </div>
+    </div>
+    <!-- header -->
+    <header>
+      <div class="header">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="logo">
+              <img src="../public/assets/images/raw_fushion_vanilla-removebg-preview.png" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <nav class="nav-header">
+              <div class="action-sidebar">
+                <h6></h6>
+                <div class="close-sidebar">
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+              </div>
+              <ul>
+                <li><a href="../views/index.html" class="active">trang chủ</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Thuốc trừ sâu</a></li>
+              </ul>
+            </nav>
+            <div class="search-box">
+              <input type="text" placeholder="Tìm kiếm tại đây ..." />
+              <button>
+                <ion-icon name="search-outline"></ion-icon>
+              </button>
+            </div>
+            <div id="cover"></div>
+          </div>
+          <div class="col-md-3">
+            <div class="header-user-shortcut text-align-right">
+              <ul class="icon-responsive">
+                <li>
+                  <a id="btn-open-search-box">
+                    <ion-icon name="search-outline"></ion-icon>
+                  </a>
+                </li>
+                <li id="btn-theme">
+                  <span>
+                    <ion-icon name="sunny"></ion-icon>
+                  </span>
+                </li>
+                <li>
+                  <a class="btn-toggler" id="btn-toggler">
+                    <ion-icon name="menu-outline"></ion-icon>
+                  </a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a href="../views/cart.html">
+                    <ion-icon name="cart-outline"></ion-icon>
+                  </a>
+                  <div class="tag-view tag-cart">
+                    <h6>Sản phẩm mới thêm</h6>
+                    <div class="list-item-cart" id="list-item-cart">
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>10</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                      <div class="item-cart">
+                        <img
+                          src="https://vuonsaigon.vn/wp-content/uploads/2020/05/Thuoc-tru-sau-khang-benh-Ansuco-100ml-1.jpg"
+                          alt=""
+                        />
+                        <div class="infor-item-cart">
+                          <span>Thuốc trừ sâu</span>
+                          <div><span>1</span></div>
+                        </div>
+                        <div class="price-item-cart">599.000 VND</div>
+                      </div>
+                    </div>
+                    <div class="tag-cart-bottom">
+                      <div class="cart-total">
+                        <h6>Tổng tiền</h6>
+                        <h4>599.000 VND</h4>
+                      </div>
+                      <div>
+                        <a href="../views/cart.html"><button class="btn-cart">Xem giỏ hàng</button></a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <a href="">
+                    <ion-icon name="person-outline"></ion-icon>
+                  </a>
+                  <div class="tag-view tag-account">
+                    <!-- này là phần user đã login -->
+                    <!-- <div class="tag-user-login">
+                                        <a href="../views/dashboard.html">
+                                            <div class="tag-user">
+                                                <img src="../public/assets/images/anh.jpg" alt="">
+                                                <div>
+                                                    <span>Xin chào</span>
+                                                    <span>Nguyễn Minh Thắng</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <div class="hr"></div>
+                                        <a href="#">
+                                            <div class="tag-infor-user">
+                                                <ion-icon name="person-circle-outline"></ion-icon>
+                                                <span>Thông tin tài khoản</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-address">
+                                                <ion-icon name="location"></ion-icon>
+                                                <span>Sổ địa chỉ</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-histories">
+                                                <ion-icon name="newspaper-outline"></ion-icon>
+                                                <span>Lịch sử mua hàng</span>
+                                            </div>
+                                        </a>
+                                        <a href="#">
+                                            <div class="tag-log-out">
+                                                <ion-icon name="log-out-outline"></ion-icon>
+                                                <span>Đăng xuất</span>
+                                            </div>
+                                        </a>
+                                    </div> -->
+                    <!-- Này là phần chwua login -->
+                    <div class="tag-user-not-login">
+                      <a href="">
+                        <div class="tag-input tag-input-signin">
+                          <div>
+                            <span>Đăng nhập</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="">
+                        <div class="tag-input tag-input-signup">
+                          <div>
+                            <span>Đăng ký</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="">
+                        <div class="tag-input tag-input-fb">
+                          <div>
+                            <div>
+                              <img src="../public/assets/icon/facebook-logo.png" alt="" />
+                            </div>
+                            <span>Đăng nhập bằng Facebook</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="">
+                        <div class="tag-input tag-input-gg">
+                          <div>
+                            <div>
+                              <img src="../public/assets/icon/google-plus.png" alt="" />
+                            </div>
+                            <span>Đăng nhập bằng Google</span>
+                          </div>
+                        </div>
+                      </a>
+                      <a href="">
+                        <div class="tag-input tag-input-zalo">
+                          <div>
+                            <div>
+                              <img src="../public/assets/icon/zalo.png" alt="" />
+                            </div>
+                            <span>Đăng nhập bằng zalo</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header -->
+    <div class="modal-success" id="modal-success">
+      <div class="modal-success-overlay"></div>
+      <div class="modal-container">
+        <img src="../public/assets/images/accept_icon.png" alt="" />
+        <span>Thêm vào giỏ hàng thành công!</span>
+        <a href="../views/cart.html"><button>Đến giỏ hàng bây giờ</button></a>
+      </div>
+    </div>
+    <!-- main -->
+    <div class="container">
+      <div class="content-dashboard">
+        <h1>Thông tin thanh toán</h1>
+        <form action="" method="post">
+          <div>
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required />
+          </div>
+          <div>
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" pattern="w\[0-9]" required />
+          </div>
+          <div>
+            <label for="city">Tỉnh/Thành phố</label>
+            <select name="city" id="city">
+              <option value="">Chọn Tỉnh/Thành phố</option>
+            </select>
+          </div>
+          <div>
+            <label for="district">Quận huyện</label>
+            <select name="district" id="district">
+              <option value="">Chọn Quận huyện</option>
+            </select>
+          </div>
+          <div>
+            <label for="ward">Phường xã</label>
+            <select name="ward" id="ward">
+              <option value="">Chọn Phường xã</option>
+            </select>
+          </div>
+          <div>
+            <label for="address">Địa chỉ</label>
+            <textarea name="address" id="address" cols="30" rows="10" required></textarea>
+          </div>
+          <div>
+            <label for="note">Ghi chú</label>
+            <textarea name="note" id="note" cols="30" rows="10"></textarea>
+          </div>
+          <div class="button-order">
+            <button type="submit">Chốt đơn</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- main -->
+
+    <!-- footer -->
+    <footer>
+      <div class="row">
+        <div class="col-md-4 infor">
+          <h6>Thông tin liên hệ</h6>
+          <ul>
+            <li>
+              <div>
+                <ion-icon name="home"></ion-icon>
+                <span>Hòa Nhơn - Hòa Vang - TP. Đà Nẵng</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <ion-icon name="mail-unread"></ion-icon>
+                <span>shop@gmail.com</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <ion-icon name="call"></ion-icon>
+                <span>09056123456</span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <ion-icon name="time"></ion-icon>
+                <span>Làm việc từ 7h30 - 17h30</span>
+              </div>
+            </li>
+          </ul>
+          <!-- <div class="boss">
+                    <div>Chịu trách nhiệm Website: Nguyễn Văn A</div>
+                    <div>Email: nva@gmail.com</div>
+                </div> -->
+          <div class="infor-social">
+            <h6>Kết nối với chúng tôi</h6>
+            <div class="list-icon-social">
+              <img src="../public/assets/icon/facebook.png" alt="facebook" />
+              <img src="../public/assets/icon/instagram.png" alt="instagram" />
+              <img src="../public/assets/icon/youtube.png" alt="youtobe" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 social">
+          <div class="bank">
+            <h6>Chúng tôi chấp nhận</h6>
+            <div class="list-bank">
+              <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/15282732253085529991.png" alt="" />
+              <img
+                src="http://img.ltwebstatic.com/images3_pi/2021/03/09/161528368123dd7a35ad8708b0dfc74b3630526891.png"
+                alt=""
+              />
+              <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/15282732803587566708.png" alt="" />
+              <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/15282732983375743706.png" alt="" />
+              <img src="http://img.ltwebstatic.com/images2_pi/2018/06/06/1528273036537082707.png" alt="" />
+              <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/1528273241354964734.png" alt="" />
+              <img src="https://img.ltwebstatic.com/images2_pi/2018/06/06/15282733431754785346.png" alt="" />
+            </div>
+            <div class="receive-news">
+              <h6>Đăng ký nhận tin</h6>
+              <div class="input-email-footer">
+                <input type="text" placeholder="Nhập địa chỉ email của bạn ..." />
+                <button><span>Gửi</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 map">
+          <h6>Trụ sở</h6>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380.5061683935988!2d108.14387341205129!3d15.999881657439415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421b4f2148f3cd%3A0xb5f873fd0ae8ec6b!2sDreams%20Mart%20-%20Dreams%20Mart!5e0!3m2!1sen!2s!4v1627404314508!5m2!1sen!2s"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>©2009-2021 SHOP bảo lưu tất cả các quyền</span>
+      </div>
+    </footer>
+    <!-- footer -->
+    <script src="../public/js/jquery-3.6.0.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../public/js/index.js"></script>
+  </body>
+</html>
