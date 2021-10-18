@@ -2885,3 +2885,57 @@ form div > div > label {
   border: 0 none;
   -webkit-appearance: none;
 }
+
+/* Blog */
+.blog .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 18rem));
+  align-content: center;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  grid-gap: 1rem 2.5rem;
+  width: 100%;
+}
+.blog .blog-card {
+  width: 100%;
+  min-width: 300px;
+  border-radius: 12px;
+  height: 320px;
+  position: relative;
+  background-color: var(--background-content);
+  border: 1px solid transparent;
+  margin: 10px 0 20px 0;
+}
+.blog .blog-card img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+.blog .blog-card .row {
+  display: flex;
+  justify-content: space-between;
+}
+.blog .blog-card > .row:not(:first-child) {
+  padding: 10px 10px 0 10px;
+}
+.blog .blog-card h2 {
+  color: var(--color-h6);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.blog .blog-card span {
+  color: var(--color-text);
+  font-size: var(--font-size-text);
+}
+.blog .blog-card span:nth-child(2) {
+  color: #00a014;
+  font-weight: bold;
+}
+.blog .blog-card:hover {
+  border: 1px solid var(--primary-button);
+}
+/* Blog */
