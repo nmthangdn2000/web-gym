@@ -1,2 +1,2 @@
 # web-gym
-demo: https://shop-gym.herokuapp.com/
+demo: [https://gymmer.onrender.com/](https://gymmer.onrender.com/)
